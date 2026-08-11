@@ -647,7 +647,7 @@
     .mobile-actions { display: none; }
 
     @media (max-width: 1050px) {
-      :root { --container: min(100% - 32px, 900px); }
+      :root { --container: min(calc(100% - 32px), 900px); }
       .nav-links { gap: 18px; }
       .nav-links a:not(.btn) { font-size: .82rem; }
       .nav-links li:nth-child(4), .nav-links li:nth-child(5) { display: none; }
