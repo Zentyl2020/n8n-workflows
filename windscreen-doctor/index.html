@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#092e3e">
+  <meta name="description" content="Mobile windscreen chip repair and replacement at your home or workplace across South Africa.">
+  <title>Windscreen Doctor | Mobile Windscreen Repair & Replacement</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/pages.css">
+  <style>
+    .home-hero { min-height: 680px; }
+    .home-hero .subhero-grid { min-height: 680px; grid-template-columns: .88fr 1.12fr; }
+    .home-hero h1 { max-width: 720px; }
+    .home-hero h1 span { color: #72dedc; }
+    .service-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 20px; background: var(--white); }
+    .service-pair article { min-height: 390px; display: flex; flex-direction: column; align-items: flex-start; padding: 48px; }
+    .service-pair article + article { color: var(--white); background: var(--navy); }
+    .service-pair article + article h2 { color: var(--white); }
+    .service-pair article + article p { color: rgba(255,255,255,.7); }
+    .service-pair .service-index { margin-bottom: auto; color: var(--muted); font-size: .82rem; font-weight: 700; }
+    .service-pair article + article .service-index { color: rgba(255,255,255,.55); }
+    .editorial-list { border-top: 1px solid var(--line); }
+    .editorial-row { display: grid; grid-template-columns: 80px 270px 1fr; gap: 24px; padding: 27px 0; border-bottom: 1px solid var(--line); }
+    .editorial-row strong { color: var(--teal-dark); font-family: "Sora", sans-serif; }
+    .editorial-row h3, .editorial-row p { margin: 0; }
+    .home-faq { display: grid; grid-template-columns: .65fr 1.35fr; gap: 60px; align-items: start; }
+    @media (max-width:800px) {
+      .home-hero, .home-hero .subhero-grid { min-height: 0; }
+      .home-hero .subhero-grid { grid-template-columns: 1fr; }
+      .service-pair, .home-faq { grid-template-columns: 1fr; }
+      .service-pair article + article { border-top: 1px solid rgba(255,255,255,.1); }
+      .editorial-row { grid-template-columns: 48px 1fr; }
+      .editorial-row p { grid-column: 2; }
+    }
+    @media (max-width:560px) {
+      .service-pair article { min-height: 330px; padding: 30px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="utility">Nationwide mobile windscreen service across South Africa</div>
+  <header class="site-header">
+    <nav class="container nav" aria-label="Primary navigation">
+      <a class="logo" href="index.html" aria-label="Windscreen Doctor home">
+        <svg viewBox="0 0 78 62" aria-hidden="true"><path d="M39 3 69 16v18c0 14-12 23-30 27C21 57 9 48 9 34V16L39 3Z" fill="none" stroke="#fff" stroke-width="4"/><path d="M16 29c14-7 32-7 46 0l-5 17c-12 5-24 5-36 0l-5-17Z" fill="#092e3e" stroke="#00a6a6" stroke-width="4"/><path d="m55 18 2 7 7 2-7 2-2 7-2-7-7-2 7-2 2-7Z" fill="#f6a800"/></svg>
+        <span class="logo-type">Windscreen <strong>Doctor</strong></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open menu"><span>☰</span></button>
+      <ul class="nav-list">
+        <li><a href="chip-repair.html">Chip Repair</a></li>
+        <li><a href="windscreen-replacement.html">Replacement</a></li>
+        <li><a href="mobile-fitment.html">Mobile Fitment</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="areas-we-serve.html">Areas</a></li>
+        <li><a href="faq.html">FAQs</a></li>
+        <li><a class="btn btn-primary" href="get-a-quote.html">Get a Quote</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="subhero home-hero">
+      <div class="container subhero-grid">
+        <div class="subhero-copy">
+          <h1>Chipped or cracked? <span>We come to you.</span></h1>
+          <p>Mobile windscreen chip repair and full windscreen replacement at your home or workplace, across South Africa.</p>
+          <div class="subhero-actions">
+            <a class="btn btn-primary" href="get-a-quote.html">Send a Photo</a>
+            <a class="btn btn-outline light" href="how-it-works.html">See How It Works</a>
+          </div>
+          <ul class="check-list" style="color:white;max-width:480px">
+            <li>Straightforward damage assessment</li>
+            <li>Vehicle-specific quotation</li>
+            <li>Home or workplace appointments</li>
+          </ul>
+        </div>
+        <div class="subhero-media"><img src="assets/hero-technician.webp" alt="South African mobile technician working on a vehicle windscreen at a customer's home" width="819" height="458" fetchpriority="high"></div>
+      </div>
+    </section>
+
+    <section class="stats-strip" aria-label="Core services">
+      <div class="container stats-grid">
+        <div class="stat"><strong>Mobile service</strong><span>We come to you</span></div>
+        <div class="stat"><strong>Chip repair</strong><span>Repair where suitable</span></div>
+        <div class="stat"><strong>Replacement</strong><span>When repair is not suitable</span></div>
+        <div class="stat"><strong>South Africa</strong><span>Availability confirmed locally</span></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head"><h2>Start with the damage. We will guide the next step.</h2><p>A clear photograph and accurate vehicle details help distinguish between a possible repair and a complete replacement.</p></div>
+        <div class="service-pair">
+          <article>
+            <span class="service-index">Repair</span>
+            <h2>Windscreen chip repair</h2>
+            <p>Address suitable stone chips before they spread. Repair retains the original windscreen and is generally the quicker, more economical route.</p>
+            <a class="btn btn-secondary" href="chip-repair.html">Explore Chip Repair</a>
+          </article>
+          <article>
+            <span class="service-index">Replacement</span>
+            <h2>Full windscreen replacement</h2>
+            <p>For severe cracks, edge damage and damage that cannot be safely repaired, we arrange a complete mobile windscreen replacement.</p>
+            <a class="btn btn-primary" href="windscreen-replacement.html">Explore Replacement</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--mist)">
+      <div class="container split">
+        <div>
+          <h2>Your car can stay where it is.</h2>
+          <p>Our mobile model is designed so you do not need to organise lifts, sit in traffic or lose half your day at a fitment centre.</p>
+          <ul class="check-list"><li>Choose a suitable home or workplace location</li><li>Share photographs and vehicle information first</li><li>Review the proposed service before the appointment</li></ul>
+          <a class="btn btn-secondary" href="mobile-fitment.html">About Mobile Fitment</a>
+        </div>
+        <div class="media-card"><img src="assets/mobile-van-interior.webp" alt="Organised mobile windscreen fitting equipment" width="512" height="288" loading="lazy"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head center"><h2>From photograph to fitment.</h2><p>Four clear stages reduce uncertainty and unnecessary back-and-forth.</p></div>
+        <div class="steps-grid">
+          <article class="step-card"><span class="step-no">1</span><h3>Send a photo</h3><p>Show the full windscreen and a close-up of the damage.</p></article>
+          <article class="step-card"><span class="step-no">2</span><h3>Add vehicle details</h3><p>Provide the year, make, model and location.</p></article>
+          <article class="step-card featured"><span class="step-no">3</span><h3>Review the quote</h3><p>Confirm the proposed service, price and appointment.</p></article>
+          <article class="step-card"><span class="step-no">4</span><h3>We come to you</h3><p>A technician attends the agreed location.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--navy);color:white">
+      <div class="container split reverse">
+        <figure class="map-frame vector-map">
+          <img src="assets/south-africa-provinces.svg" alt="Vector map of Windscreen Doctor service regions in South Africa" width="809" height="709" loading="lazy">
+          <span class="map-marker" style="left:72%;top:35%"><b>JHB / Pretoria</b></span>
+          <span class="map-marker" style="left:25%;top:84%"><b>Cape Town</b></span>
+          <span class="map-marker" style="left:87%;top:60%"><b>Durban</b></span>
+          <span class="map-marker" style="left:64%;top:84%"><b>Gqeberha</b></span>
+          <span class="map-marker" style="left:56%;top:59%"><b>Bloemfontein</b></span>
+          <figcaption class="map-credit">Province map by Adrian Frith, CC BY-SA via Wikimedia Commons.</figcaption>
+        </figure>
+        <div>
+          <h2 style="color:white">Tell us where the vehicle is.</h2>
+          <p style="color:rgba(255,255,255,.7)">Coverage depends on current technician and stock availability. Share your suburb and we will confirm before booking.</p>
+          <a class="btn btn-primary" href="areas-we-serve.html">View Service Areas</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head"><h2>Clearer thinking. Less disruption.</h2></div>
+        <div class="editorial-list">
+          <div class="editorial-row"><strong>01</strong><h3>Repair-first thinking</h3><p>We first consider whether suitable damage can retain the original windscreen.</p></div>
+          <div class="editorial-row"><strong>02</strong><h3>Mobile by design</h3><p>The service journey is organised around the vehicle's location and your schedule.</p></div>
+          <div class="editorial-row"><strong>03</strong><h3>Clear recommendations</h3><p>You receive a practical next step based on the visible damage and vehicle specification.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--mist)">
+      <div class="container home-faq">
+        <div><h2>A clearer answer starts here.</h2><p>Browse common questions, or send the actual damage for assessment.</p><a class="btn btn-secondary" href="faq.html">Browse All FAQs</a></div>
+        <div class="accordion">
+          <article class="faq-item"><button class="faq-question" aria-expanded="true">Can my windscreen chip be repaired?<span>+</span></button><div class="faq-answer"><div><p>It depends on the size, depth and position. Damage near an edge or in the driver's direct view may require replacement.</p></div></div></article>
+          <article class="faq-item"><button class="faq-question" aria-expanded="false">Do you come to my home or workplace?<span>+</span></button><div class="faq-answer"><div><p>Yes. Tell us the vehicle location and we will confirm mobile-service availability and practical requirements.</p></div></div></article>
+          <article class="faq-item"><button class="faq-question" aria-expanded="false">Can I claim through vehicle insurance?<span>+</span></button><div class="faq-answer"><div><p>Insurance support is being finalised. Cover differs between policies, so confirm glass cover and excess with your insurer.</p></div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compact">
+      <div class="container availability">
+        <h2>Show us what happened.</h2>
+        <p>Send the vehicle details, your location and clear photographs for a useful recommendation.</p>
+        <a class="btn btn-primary" href="get-a-quote.html">Request a Quote</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><a class="logo" href="index.html"><span class="logo-type">Windscreen <strong>Doctor</strong></span></a><p>Mobile chip repair and windscreen replacement across South Africa.</p></div>
+      <div><h3>Services</h3><ul><li><a href="chip-repair.html">Chip repair</a></li><li><a href="windscreen-replacement.html">Replacement</a></li><li><a href="mobile-fitment.html">Mobile fitment</a></li></ul></div>
+      <div><h3>Helpful</h3><ul><li><a href="how-it-works.html">How it works</a></li><li><a href="areas-we-serve.html">Areas</a></li><li><a href="faq.html">FAQs</a></li></ul></div>
+      <div><h3>Learn</h3><ul><li><a href="glass-care-tips.html">Glass care tips</a></li><li><a href="get-a-quote.html">Request a quote</a></li></ul></div>
+    </div>
+    <div class="container footer-bottom">© <span data-year></span> Windscreen Doctor. Interactive website concept.</div>
+  </footer>
+  <div class="mobile-actions"><a class="btn btn-outline" href="get-a-quote.html">Send Photo</a><a class="btn btn-primary" href="get-a-quote.html">Get a Quote</a></div>
+  <script src="assets/pages.js"></script>
+</body>
+</html>
