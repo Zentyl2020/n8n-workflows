@@ -142,6 +142,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
+      isolation: isolate;
       border-bottom: 1px solid rgba(215,228,229,.7);
       background: rgba(255,255,255,.94);
       backdrop-filter: blur(14px);
@@ -857,23 +858,45 @@
       .utility-inner span:last-child { display: none; }
       .menu-toggle { display: inline-flex; }
       .nav-links {
-        position: fixed;
-        top: 109px;
+        position: absolute;
+        top: 100%;
         right: 0;
-        bottom: 0;
         left: 0;
+        z-index: 120;
+        min-height: calc(100dvh - 78px);
         display: none;
-        align-content: start;
+        flex-direction: column;
         align-items: stretch;
         gap: 0;
-        padding: 24px;
+        margin: 0;
+        padding: 24px 24px 34px;
+        overflow-y: auto;
         color: var(--white);
-        background: var(--navy);
+        background: #092e3e;
+        box-shadow: 0 24px 45px rgba(6,31,42,.28);
       }
-      .nav-links.open { display: grid; }
-      .nav-links li, .nav-links li:nth-child(4), .nav-links li:nth-child(5) { display: block; border-bottom: 1px solid rgba(255,255,255,.12); }
+      .nav-links.open { display: flex; }
+      .nav-links li, .nav-links li:nth-child(4), .nav-links li:nth-child(5) {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        display: block;
+        flex: 0 0 auto;
+        opacity: 1;
+        visibility: visible;
+        border-bottom: 1px solid rgba(255,255,255,.14);
+      }
       .nav-links li:last-child { margin-top: 22px; border: 0; }
-      .nav-links a:not(.btn) { display: block; padding: 17px 4px; color: var(--white); font-size: 1.05rem; }
+      .nav-links a:not(.btn) {
+        position: relative;
+        z-index: 2;
+        display: block;
+        padding: 18px 4px;
+        color: #ffffff !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        font-size: 1.05rem;
+      }
       .nav-links .btn { width: 100%; }
       .hero-inner { grid-template-columns: 1fr; gap: 42px; padding-block: 64px 90px; }
       .hero-copy { max-width: 700px; }
