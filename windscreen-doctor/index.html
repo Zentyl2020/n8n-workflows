@@ -48,6 +48,7 @@
     a { color: inherit; text-decoration: none; }
     button, input, select, textarea { font: inherit; }
     button { cursor: pointer; }
+    *:focus-visible { outline: 2px solid var(--teal-dark); outline-offset: 3px; }
     h1, h2, h3, h4, p { margin-top: 0; }
     h1, h2, h3, h4 {
       color: var(--navy);
@@ -83,6 +84,14 @@
       background: var(--amber);
       content: "";
     }
+    .motion-ready .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+    }
+    .motion-ready .reveal.revealed { opacity: 1; transform: none; }
+    .motion-ready .reveal-delay-1 { transition-delay: 100ms; }
+    .motion-ready .reveal-delay-2 { transition-delay: 200ms; }
     .skip-link {
       position: fixed;
       top: 10px;
@@ -219,9 +228,22 @@
       padding-block: 76px 104px;
     }
     .hero-copy { max-width: 640px; }
-    .hero .eyebrow { color: #74e0df; }
+    .hero .eyebrow {
+      gap: 8px;
+      padding: 8px 12px;
+      border: 1px solid rgba(49,208,207,.24);
+      border-radius: 99px;
+      color: #74e0df;
+      background: rgba(0,166,166,.08);
+    }
+    .hero .eyebrow::before { width: 7px; height: 7px; border-radius: 50%; background: #31d0cf; }
     .hero h1 { margin-bottom: 25px; color: var(--white); }
-    .hero h1 span { color: #31d0cf; }
+    .hero h1 span {
+      color: transparent;
+      background: linear-gradient(90deg, #eaf7f6, #38cfcd);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
     .hero-copy > p { max-width: 610px; margin-bottom: 31px; color: rgba(255,255,255,.82); font-size: 1.25rem; }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 13px; }
     .hero-note { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 24px; color: rgba(255,255,255,.65); font-size: .9rem; }
@@ -235,7 +257,7 @@
       border-radius: 38px 38px 38px 110px;
       background:
         linear-gradient(180deg, rgba(4,31,42,.02), rgba(4,31,42,.55)),
-        url("https://images.pexels.com/photos/11950155/pexels-photo-11950155.jpeg?auto=compress&cs=tinysrgb&w=1500") center / cover no-repeat;
+        url("assets/hero-technician.png") center / cover no-repeat;
       box-shadow: 0 32px 80px rgba(0,0,0,.28);
     }
     .hero-media::after {
@@ -289,8 +311,18 @@
       background: var(--white);
       box-shadow: var(--shadow-sm);
     }
-    .trust-item { display: flex; align-items: center; gap: 13px; padding: 22px; }
+    .trust-item { position: relative; display: flex; align-items: center; gap: 13px; padding: 25px 22px 22px; }
     .trust-item + .trust-item { border-left: 1px solid var(--line); }
+    .trust-number {
+      position: absolute;
+      top: 7px;
+      right: 12px;
+      color: #9aafb6;
+      font-family: "Sora", sans-serif;
+      font-size: .61rem;
+      font-weight: 800;
+      letter-spacing: .1em;
+    }
     .trust-icon {
       display: grid;
       width: 44px;
@@ -355,6 +387,9 @@
     }
     .service-card.replace .service-icon { color: var(--navy); background: var(--amber); }
     .service-icon svg { width: 31px; height: 31px; }
+    .service-card:hover .service-icon { color: var(--white); background: var(--teal-dark); transform: translateY(-2px); }
+    .service-card.replace:hover .service-icon { color: var(--navy); background: var(--amber-hover); }
+    .service-icon { transition: color .2s ease, background .2s ease, transform .2s ease; }
     .service-number { color: var(--teal-dark); font-family: "Sora", sans-serif; font-size: .76rem; font-weight: 800; letter-spacing: .12em; }
     .service-card.replace .service-number { color: #75dedc; }
     .service-card h3 { margin: 11px 0 14px; color: var(--navy); font-size: 2rem; }
@@ -473,6 +508,20 @@
       border-top: 2px dashed #b9d4d4;
       content: "";
     }
+    .steps::after {
+      position: absolute;
+      top: 28px;
+      right: 12.5%;
+      left: 12.5%;
+      z-index: 0;
+      height: 2px;
+      background: var(--teal);
+      content: "";
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 1.1s cubic-bezier(.16,1,.3,1);
+    }
+    .steps.revealed::after { transform: scaleX(1); }
     .step { position: relative; z-index: 1; text-align: center; }
     .step-number {
       display: grid;
@@ -518,9 +567,11 @@
       place-items: center;
       border: 1px solid rgba(255,255,255,.12);
       border-radius: var(--radius-lg);
-      background:
+      background-color: rgba(255,255,255,.035);
+      background-image:
         radial-gradient(circle at 50% 48%, rgba(0,166,166,.26), transparent 48%),
-        rgba(255,255,255,.035);
+        radial-gradient(rgba(255,255,255,.08) 1px, transparent 1px);
+      background-size: auto, 28px 28px;
     }
     .sa-map { width: min(84%, 520px); filter: drop-shadow(0 24px 26px rgba(0,0,0,.28)); }
     .map-pin circle { animation: pinPulse 2.8s infinite; transform-origin: center; }
@@ -581,13 +632,21 @@
     .faq-aside .btn { width: 100%; margin-top: 8px; }
     .accordion { border-top: 1px solid var(--line); }
     .faq-item { border-bottom: 1px solid var(--line); }
+    .accordion { display: grid; gap: 12px; border-top: 0; }
+    .faq-item {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      background: var(--white);
+      box-shadow: 0 6px 20px rgba(9,46,62,.045);
+    }
     .faq-question {
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 20px;
-      padding: 22px 0;
+      padding: 20px 22px;
       border: 0;
       color: var(--navy);
       background: transparent;
@@ -600,7 +659,7 @@
     .faq-question[aria-expanded="true"] svg { transform: rotate(45deg); }
     .faq-answer { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .25s ease; }
     .faq-answer > div { overflow: hidden; }
-    .faq-answer p { margin: 0; padding: 0 42px 22px 0; }
+    .faq-answer p { margin: 0; padding: 0 52px 22px 22px; }
     .faq-question[aria-expanded="true"] + .faq-answer { grid-template-rows: 1fr; }
 
     .quote { position: relative; overflow: hidden; background: var(--mist); }
@@ -622,6 +681,7 @@
     .quote-list svg { width: 21px; height: 21px; flex: 0 0 auto; margin-top: 3px; color: var(--teal-dark); }
     .quote-form {
       padding: 38px;
+      border-top: 5px solid var(--amber);
       border-radius: var(--radius);
       background: var(--white);
       box-shadow: var(--shadow-lg);
@@ -906,8 +966,10 @@
 
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+      .motion-ready .reveal { opacity: 1 !important; transform: none !important; }
     }
   </style>
+  <script>document.documentElement.classList.add("motion-ready");</script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -926,9 +988,9 @@
     <div class="container nav-wrap">
       <a class="logo" href="#top" aria-label="Windscreen Doctor home">
         <svg class="logo-mark" viewBox="0 0 78 62" aria-hidden="true">
-          <path d="M7 13C23 5 54 5 69 13l-8 35c-16 7-30 7-46 0L7 13Z" fill="none" stroke="#092e3e" stroke-width="5" stroke-linejoin="round"/>
-          <path d="M14 44c17-3 31-2 47 3" fill="none" stroke="#00a6a6" stroke-width="4" stroke-linecap="round"/>
-          <path d="m56 3 2.4 8.6L67 14l-8.6 2.4L56 25l-2.4-8.6L45 14l8.6-2.4L56 3Z" fill="#00a6a6" stroke="#fff" stroke-width="1.5"/>
+          <path d="M39 3 69 16v18c0 14-12 23-30 27C21 57 9 48 9 34V16L39 3Z" fill="none" stroke="#092e3e" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M16 29c14-7 32-7 46 0l-5 17c-12 5-24 5-36 0l-5-17Z" fill="#fff" stroke="#00a6a6" stroke-width="4" stroke-linejoin="round"/>
+          <path d="m55 18 2 7 7 2-7 2-2 7-2-7-7-2 7-2 2-7Z" fill="#00a6a6" stroke="#fff" stroke-width="1.2"/>
         </svg>
         <span class="logo-type">Windscreen <strong>Doctor</strong></span>
       </a>
@@ -949,7 +1011,7 @@
   <main id="main">
     <section class="hero" id="top">
       <div class="container hero-inner">
-        <div class="hero-copy">
+        <div class="hero-copy reveal">
           <span class="eyebrow">Mobile windscreen specialists</span>
           <h1>Chipped or cracked? <span>We come to you.</span></h1>
           <p>Mobile windscreen chip repair and full windscreen replacement at your home or workplace, across South Africa.</p>
@@ -967,7 +1029,7 @@
             </span>
             <span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg>
-              All major vehicle makes
+              Vehicle-specific assessment
             </span>
             <span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg>
@@ -975,7 +1037,7 @@
             </span>
           </div>
         </div>
-        <div class="hero-media" role="img" aria-label="Auto-glass technician preparing a vehicle windscreen">
+        <div class="hero-media reveal reveal-delay-1" role="img" aria-label="South African mobile technician working on a vehicle windscreen at a customer's home">
           <div class="hero-float">
             <span class="float-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 15V6h11v9M14 9h4l3 3v3M5 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM18 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M7 16h9"/></svg>
@@ -990,24 +1052,28 @@
     <div class="trust" aria-label="Our services">
       <div class="container trust-inner">
         <div class="trust-item">
+          <span class="trust-number">01</span>
           <span class="trust-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 15V6h11v9M14 9h4l3 3v3M5 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM18 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/></svg>
           </span>
           <span><strong>Mobile service</strong><span>We come to you</span></span>
         </div>
         <div class="trust-item">
+          <span class="trust-number">02</span>
           <span class="trust-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 18 7 7c3-2 7-2 10 0l3 11c-5-2-11-2-16 0Z"/><path d="m12 8-1 3 2 2-2 3"/></svg>
           </span>
           <span><strong>Chip repair</strong><span>Repair where suitable</span></span>
         </div>
         <div class="trust-item">
+          <span class="trust-number">03</span>
           <span class="trust-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 18 7 7c3-2 7-2 10 0l3 11c-5-2-11-2-16 0Z"/><path d="M8 12h8"/></svg>
           </span>
           <span><strong>Full replacement</strong><span>When repair is not suitable</span></span>
         </div>
         <div class="trust-item">
+          <span class="trust-number">04</span>
           <span class="trust-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
           </span>
@@ -1018,13 +1084,13 @@
 
     <section class="services" id="services">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head reveal">
           <span class="eyebrow">Two focused services</span>
-          <h2>The right solution for the damage.</h2>
+          <h2>Clear solutions for clear vision.</h2>
           <p>A chip does not always mean replacing the entire windscreen. Send us a clear photo and your vehicle details so we can help determine the sensible next step.</p>
         </div>
         <div class="service-grid">
-          <article class="service-card repair">
+          <article class="service-card repair reveal">
             <div class="service-content">
               <span class="service-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 18 7 7c3-2 7-2 10 0l3 11c-5-2-11-2-16 0Z"/><path d="m12 8-1 3 2 2-2 3"/></svg>
@@ -1035,7 +1101,7 @@
               <a class="text-link" href="#quote">Send a chip photo <span aria-hidden="true">→</span></a>
             </div>
           </article>
-          <article class="service-card replace">
+          <article class="service-card replace reveal reveal-delay-1">
             <div class="service-content">
               <span class="service-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 18 7 7c3-2 7-2 10 0l3 11c-5-2-11-2-16 0Z"/><path d="M8 12h8"/></svg>
@@ -1052,7 +1118,7 @@
 
     <section class="mobile-section" id="mobile">
       <div class="container mobile-grid">
-        <div class="mobile-copy">
+        <div class="mobile-copy reveal">
           <span class="eyebrow">Convenience without the waiting room</span>
           <h2>Your car can stay where it is.</h2>
           <p>A damaged windscreen is disruptive enough. Our mobile model is designed so you do not need to organise lifts, sit in traffic or lose half your day at a fitment centre.</p>
@@ -1078,7 +1144,7 @@
           </div>
           <a class="btn btn-primary" href="#quote">Arrange mobile service</a>
         </div>
-        <div class="mobile-visual" role="img" aria-label="Automotive technician working on a car">
+        <div class="mobile-visual reveal reveal-delay-1" role="img" aria-label="Automotive technician working on a car">
           <div class="mobile-badge">
             <strong>At home. At work. On your terms.</strong>
             <span>Tell us where the vehicle is and we will confirm service availability.</span>
@@ -1089,12 +1155,12 @@
 
     <section class="decision" id="repair-or-replace">
       <div class="container">
-        <div class="section-head center">
+        <div class="section-head center reveal">
           <span class="eyebrow">Repair or replace?</span>
           <h2>We will help you make the call.</h2>
           <p>The final decision requires an assessment, but these common indicators provide a useful starting point.</p>
         </div>
-        <div class="decision-grid">
+        <div class="decision-grid reveal">
           <article class="decision-card repair-card">
             <h3>Repair may be suitable when:</h3>
             <p>The damage is small, isolated and away from critical areas.</p>
@@ -1123,11 +1189,11 @@
 
     <section class="process" id="process">
       <div class="container">
-        <div class="section-head center">
+        <div class="section-head center reveal">
           <span class="eyebrow">Simple from the start</span>
           <h2>From damaged to sorted in four steps.</h2>
         </div>
-        <div class="steps">
+        <div class="steps reveal">
           <div class="step">
             <span class="step-number">01</span>
             <h3>Send a photo</h3>
@@ -1154,7 +1220,7 @@
 
     <section class="coverage" id="coverage">
       <div class="container coverage-grid">
-        <div>
+        <div class="reveal">
           <span class="eyebrow">Nationwide South Africa</span>
           <h2>One mobile service, wherever your road takes you.</h2>
           <p>We are building a national service experience across South Africa's provinces, metros and surrounding areas. Enter your suburb when requesting a quote and we will confirm availability.</p>
@@ -1167,7 +1233,7 @@
             <span class="city"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2"/></svg>Bloemfontein</span>
           </div>
         </div>
-        <div class="map-card" aria-label="Map of South Africa">
+        <div class="map-card reveal reveal-delay-1" aria-label="Map of South Africa">
           <svg class="sa-map" viewBox="0 0 640 480" role="img" aria-label="Stylised South Africa service coverage map">
             <defs>
               <linearGradient id="mapFill" x1="0" x2="1" y1="0" y2="1">
@@ -1194,11 +1260,11 @@
 
     <section class="why">
       <div class="container">
-        <div class="section-head center">
+        <div class="section-head center reveal">
           <span class="eyebrow">The Windscreen Doctor approach</span>
           <h2>Less disruption. Clearer answers.</h2>
         </div>
-        <div class="why-grid">
+        <div class="why-grid reveal">
           <article class="why-card">
             <span class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m4 15 4-4 4 4 8-8"/><path d="M16 7h4v4"/></svg></span>
             <h3>Repair-first thinking</h3>
@@ -1235,13 +1301,13 @@
 
     <section class="faq" id="faqs">
       <div class="container faq-grid">
-        <aside class="faq-aside">
+        <aside class="faq-aside reveal">
           <span class="eyebrow">Helpful answers</span>
           <h2>Still unsure?</h2>
           <p>A clear photo is often the best place to start. Show us the damage and tell us what vehicle you drive.</p>
           <a class="btn btn-primary" href="#quote">Send damage details</a>
         </aside>
-        <div class="accordion">
+        <div class="accordion reveal reveal-delay-1">
           <div class="faq-item">
             <button class="faq-question" type="button" aria-expanded="true">Can my windscreen chip be repaired?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
             <div class="faq-answer"><div><p>It depends on the size, depth and position of the damage. Chips near an edge, in the driver's line of sight or connected to a long crack may require replacement. Send a clear photo for an initial assessment.</p></div></div>
@@ -1272,7 +1338,7 @@
 
     <section class="quote" id="quote">
       <div class="container quote-grid">
-        <div class="quote-copy">
+        <div class="quote-copy reveal">
           <span class="eyebrow">Request an assessment</span>
           <h2>Show us what happened.</h2>
           <p>Tell us about the damage and your vehicle. Once the final site is connected, these details can be sent directly to your WhatsApp or quotation inbox.</p>
@@ -1283,7 +1349,7 @@
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m5 12 4 4L19 6"/></svg>Your suburb and preferred location</li>
           </ul>
         </div>
-        <form class="quote-form" id="quote-form">
+        <form class="quote-form reveal reveal-delay-1" id="quote-form">
           <div id="form-content">
             <h3>Get a windscreen quote</h3>
             <p>Fields marked with * are required.</p>
@@ -1399,9 +1465,9 @@
       <div class="footer-brand">
         <a class="logo" href="#top" aria-label="Windscreen Doctor home">
           <svg class="logo-mark" viewBox="0 0 78 62" aria-hidden="true">
-            <path d="M7 13C23 5 54 5 69 13l-8 35c-16 7-30 7-46 0L7 13Z" fill="none" stroke="#fff" stroke-width="5" stroke-linejoin="round"/>
-            <path d="M14 44c17-3 31-2 47 3" fill="none" stroke="#00a6a6" stroke-width="4" stroke-linecap="round"/>
-            <path d="m56 3 2.4 8.6L67 14l-8.6 2.4L56 25l-2.4-8.6L45 14l8.6-2.4L56 3Z" fill="#00a6a6" stroke="#fff" stroke-width="1.5"/>
+            <path d="M39 3 69 16v18c0 14-12 23-30 27C21 57 9 48 9 34V16L39 3Z" fill="none" stroke="#fff" stroke-width="4" stroke-linejoin="round"/>
+            <path d="M16 29c14-7 32-7 46 0l-5 17c-12 5-24 5-36 0l-5-17Z" fill="#092e3e" stroke="#00a6a6" stroke-width="4" stroke-linejoin="round"/>
+            <path d="m55 18 2 7 7 2-7 2-2 7-2-7-7-2 7-2 2-7Z" fill="#00a6a6" stroke="#fff" stroke-width="1.2"/>
           </svg>
           <span class="logo-type">Windscreen <strong>Doctor</strong></span>
         </a>
@@ -1492,6 +1558,20 @@
       document.querySelector("#form-success").classList.add("show");
       form.scrollIntoView({ behavior: "smooth", block: "center" });
     });
+
+    const revealElements = document.querySelectorAll(".reveal");
+    if ("IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("revealed");
+          revealObserver.unobserve(entry.target);
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -40px" });
+      revealElements.forEach(element => revealObserver.observe(element));
+    } else {
+      revealElements.forEach(element => element.classList.add("revealed"));
+    }
 
     document.querySelector("#year").textContent = new Date().getFullYear();
   </script>
