@@ -298,7 +298,7 @@ p { color: var(--muted); }
   bottom: 8px;
   left: 12px;
   color: #4e626a;
-  font-size: .67rem;
+  font-size: .75rem;
   text-align: center;
 }
 .area-list { display: grid; gap: 16px; }
