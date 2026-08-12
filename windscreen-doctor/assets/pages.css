@@ -170,7 +170,7 @@ p { color: var(--muted); }
 .stat { position: relative; padding: 23px; text-align: center; }
 .stat + .stat { border-left: 1px solid rgba(255,255,255,.18); }
 .stat strong { display: block; font-family: "Sora", sans-serif; font-size: 1rem; }
-.stat span { color: rgba(255,255,255,.72); font-size: .84rem; }
+.stat span { color: rgba(255,255,255,.88); font-size: .84rem; }
 
 .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -353,7 +353,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--teal-dark); box-
 .footer-grid h3 { color: var(--white); font-size: .9rem; }
 .footer-grid ul { display: grid; gap: 9px; margin: 0; padding: 0; list-style: none; font-size: .88rem; }
 .footer-grid a:hover { color: #63dddb; }
-.footer-bottom { padding: 18px 0 88px; border-top: 1px solid rgba(255,255,255,.1); color: rgba(255,255,255,.45); font-size: .78rem; }
+.footer-bottom { padding: 18px 0 88px; border-top: 1px solid rgba(255,255,255,.1); color: rgba(255,255,255,.62); font-size: .78rem; }
 .mobile-actions {
   position: fixed;
   right: 0;
