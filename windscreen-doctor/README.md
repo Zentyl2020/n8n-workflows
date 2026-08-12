@@ -1,6 +1,6 @@
 # Windscreen Doctor website concept
 
-Interactive, responsive single-page website concept for `windscreendoctor.co.za`.
+Interactive, responsive multi-page website concept for `windscreendoctor.co.za`.
 
 ## Preview locally
 
@@ -28,21 +28,22 @@ interactive demonstration and does not submit or store customer data.
 
 ## WordPress handoff
 
-The page maps cleanly to reusable Gutenberg blocks or an Elementor/Bricks
-template:
+The prototype includes these WordPress-ready page templates:
 
-1. Utility bar and global header
-2. Hero
-3. Trust/service strip
-4. Service cards
-5. Mobile-fitting feature
-6. Repair-versus-replace guide
-7. Four-step process
-8. Coverage section
-9. Benefits grid
-10. FAQ accordion
-11. Quotation form
-12. Global footer
+1. Homepage
+2. Windscreen chip repair
+3. Windscreen replacement
+4. Mobile fitment
+5. How it works
+6. Areas we serve
+7. Frequently asked questions
+8. Request a quote
+9. Glass care tips archive
+10. Glass care article
+
+The shared page components map cleanly to reusable Gutenberg blocks or an
+Elementor/Bricks template: global header and footer, service cards, process
+steps, coverage map, FAQ accordions, article cards and quotation fields.
 
 Set the colours and typography as WordPress global styles before recreating
 the sections.
