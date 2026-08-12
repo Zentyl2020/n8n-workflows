@@ -44,8 +44,13 @@ h2 { font-size: clamp(2rem, 4vw, 3.2rem); }
 h3 { font-size: 1.35rem; }
 p { color: var(--muted); }
 .container { width: var(--container); margin-inline: auto; }
-.section { padding: 100px 16px; }
-.section.compact { padding-block: 72px; }
+.section {
+  padding-top: 100px;
+  padding-right: 16px;
+  padding-bottom: 100px;
+  padding-left: 16px;
+}
+.section.compact { padding-top: 72px; padding-bottom: 72px; }
 .section-head { max-width: 760px; margin-bottom: 44px; }
 .section-head.center { margin-inline: auto; text-align: center; }
 .section-head p { margin-bottom: 0; font-size: 1.1rem; }
@@ -109,7 +114,13 @@ p { color: var(--muted); }
   background: rgba(255,255,255,.08);
 }
 
-.subhero { position: relative; overflow: hidden; padding-inline: 16px; color: var(--white); background: var(--navy); }
+.subhero {
+  position: relative;
+  overflow: hidden;
+  padding: 8px 16px;
+  color: var(--white);
+  background: var(--navy);
+}
 .subhero::before {
   position: absolute;
   top: -260px;
@@ -132,7 +143,7 @@ p { color: var(--muted); }
   padding-block: 70px;
 }
 .subhero-copy { max-width: 650px; }
-.subhero h1 { color: var(--white); }
+.subhero h1, .subhero h2, .subhero h3 { color: var(--white); }
 .subhero p { color: rgba(255,255,255,.76); font-size: 1.14rem; }
 .subhero-actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 28px; }
 .subhero-media {
@@ -154,7 +165,7 @@ p { color: var(--muted); }
 .subhero.full .container { position: relative; z-index: 2; padding-block: 78px; }
 .subhero.full .subhero-copy { max-width: 700px; }
 
-.stats-strip { color: var(--white); background: var(--teal-dark); }
+.stats-strip { padding: 8px 16px; color: var(--white); background: var(--teal-dark); }
 .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
 .stat { position: relative; padding: 23px; text-align: center; }
 .stat + .stat { border-left: 1px solid rgba(255,255,255,.18); }
@@ -369,7 +380,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--teal-dark); box-
 
 @media (max-width: 800px) {
   :root { --container: calc(100% - 30px); }
-  .section { padding: 72px 0; }
+  .section { padding: 72px 16px; }
   .menu-toggle { display: grid; }
   .nav-list {
     position: absolute;
