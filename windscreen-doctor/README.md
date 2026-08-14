@@ -2,12 +2,12 @@
 
 Interactive, responsive multi-page website concept for `windscreendoctor.co.za`.
 
+Visual direction: Rivian automotive confidence, Apple editorial storytelling, Linear form precision, with Windscreen Doctor’s existing service copy.
+
 ## Preview locally
 
-Serve this directory with any static web server, for example:
-
 ```bash
-python -m http.server 4173 --directory windscreen-doctor
+python3 -m http.server 4173 --directory windscreen-doctor
 ```
 
 Then open `http://localhost:4173`.
@@ -20,15 +20,30 @@ The site deliberately avoids unverified claims about:
 - glass or technician certifications
 - warranties
 - same-day response
-- ADAS recalibration capability
+- in-house ADAS recalibration
 - fixed pricing
+- invented testimonials
 
 Confirm those details before production launch. The quotation form is an
 interactive demonstration and does not submit or store customer data.
+Phone and WhatsApp numbers are left unpublished until confirmed.
+
+## Quote form fields
+
+Preserved IDs and names:
+
+- `name`, `mobile`, `province`, `suburb`
+- `vehicle-year` / `vehicle_year`, `vehicle-make` / `vehicle_make`, `vehicle-model` / `vehicle_model`
+- `damage` values: `Chip repair`, `Crack`, `Smashed`, `Unsure`
+- `photo`, `notes`
+
+Added optional fields (do not exist in any live backend yet):
+
+- `city`, `postcode`, `vehicle-variant`, `damage-size`, `damage-position`
+
+Suburb handoff from `areas-we-serve.html?suburb=` is unchanged.
 
 ## WordPress handoff
-
-The prototype includes these WordPress-ready page templates:
 
 1. Homepage
 2. Windscreen chip repair
@@ -40,39 +55,35 @@ The prototype includes these WordPress-ready page templates:
 8. Request a quote
 9. Glass care tips archive
 10. Glass care article
-
-The shared page components map cleanly to reusable Gutenberg blocks or an
-Elementor/Bricks template: global header and footer, service cards, process
-steps, coverage map, FAQ accordions, article cards and quotation fields.
-
-Set the colours and typography as WordPress global styles before recreating
-the sections.
+11. Privacy Policy (placeholder)
+12. Terms (placeholder)
 
 ## Brand tokens
 
-- Midnight Navy: `#092E3E`
-- Clear Teal: `#00A6A6`
-- Action Amber: `#F6A800`
-- Sky Mist: `#EAF7F6`
-- Graphite: `#17242C`
+- Near black: `#0A0A0A`
+- Graphite: `#171717`
+- Warm white: `#F7F7F5`
 - White: `#FFFFFF`
-- Heading font: Sora
-- Body font: Source Sans 3
+- Muted grey: `#858585` (labels only; body text is darker for contrast)
+- Brand teal: `#00A6A6` (selected states, progress, links)
+- Action amber: `#F6A800` (primary CTA)
+- Type: Inter
+
+See `DESIGN-UPGRADE.md` for the section-by-section keep/improve map.
 
 ## Prototype photography
 
-All photographic prototype assets are stored as optimized WebP files. The
-favicon and service-area map use SVG so they remain sharp at every size.
+Photographic assets are optimized WebP. The favicon and service-area map use SVG.
 
-Earlier source photography included:
-
-- Auto-glass technician: https://www.pexels.com/photo/auto-glass-technician-putting-glue-from-glass-placement-11950155/
-- Cracked windscreen: https://www.pexels.com/photo/cracks-on-windshield-of-car-on-road-19773544/
-- Mechanic working at a windscreen: https://www.pexels.com/photo/mechanic-holding-a-car-s-wiper-8478211/
-
-Replace the hero and service imagery with an authentic South African
-Windscreen Doctor photoshoot before the production launch.
+Replace generated and stock photography with an authentic South African
+Windscreen Doctor photoshoot before production launch.
 
 The South Africa province map is adapted from
 ["Map of South Africa with provincial borders"](https://commons.wikimedia.org/wiki/File:Map_of_South_Africa_with_provincial_borders.svg)
 by Adrian Frith under CC BY-SA.
+
+Crack and trim photographs include Pexels sources:
+
+- Cracked windscreen: https://www.pexels.com/photo/cracks-on-windshield-of-car-on-road-19773544/
+- Adhesive application: https://www.pexels.com/photo/auto-glass-technician-putting-glue-from-glass-placement-11950155/
+- Trim/fitment: https://www.pexels.com/photo/mechanic-holding-a-car-s-wiper-8478211/
