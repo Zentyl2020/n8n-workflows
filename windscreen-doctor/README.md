@@ -34,9 +34,10 @@ saved in `archive/chip-repair.html` for a later return.
 Current live positioning:
 
 - Nationwide mobile **windscreen replacement**
+- Any vehicle: yellow metal / plant, luxury cars, passenger vehicles, bakkies
 - Seven days a week
-- Cars, bakkies and yellow metal / plant
 - Towns and outlying sites, not only metros
+- Chip or crack **repair** is not this site. Damaged glass is quoted for replacement.
 
 ## Quote form fields
 

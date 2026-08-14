@@ -234,7 +234,23 @@ p { color: var(--body); }
 .hero .kicker { color: rgba(255,255,255,.72); }
 .hero h1, .hero h2 { color: var(--white); }
 .hero h1 span { display: block; }
-.hero .support { max-width: 34rem; color: rgba(255,255,255,.82); font-size: 1.08rem; }
+.hero .support { max-width: 36rem; color: rgba(255,255,255,.82); font-size: 1.08rem; }
+.hero-fleet {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 22px;
+}
+.hero-fleet span {
+  padding: 7px 12px;
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: 999px;
+  color: rgba(255,255,255,.9);
+  font-size: .78rem;
+  font-weight: 520;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 .hero-shine {
   position: absolute;
@@ -318,6 +334,25 @@ p { color: var(--body); }
   font-weight: 600;
   letter-spacing: .14em;
   text-transform: uppercase;
+}
+.fleet-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.fleet-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--white);
+}
+.fleet-card img { height: 180px; object-fit: cover; }
+.fleet-card .pair-body { padding: 22px; }
+.fleet-card.replace { color: var(--white); background: var(--black); border-color: transparent; }
+.fleet-card.replace h3 { color: var(--white); }
+.fleet-card.replace p { color: rgba(255,255,255,.72); }
+@media (max-width: 900px) {
+  .fleet-grid { grid-template-columns: 1fr 1fr; }
 }
 
 .visualiser {
@@ -909,7 +944,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--accent-dark); bo
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .stat:nth-child(3), .stat:nth-child(4) { border-top: 1px solid var(--line-dark); }
   .stat:nth-child(3) { border-left: 0; }
-  .grid-3, .grid-4, .steps-grid, .tips-grid, .city-grid { grid-template-columns: repeat(2, 1fr); }
+  .grid-3, .grid-4, .steps-grid, .tips-grid, .city-grid, .fleet-grid { grid-template-columns: repeat(2, 1fr); }
   .pair-card { min-height: 0; }
   .pair-card img { height: 240px; }
   .process-row, .quality-row { grid-template-columns: 72px 1fr; gap: 16px; padding: 32px 0; }
