@@ -144,33 +144,33 @@ if (visualiser) {
   const details = {
     chip: {
       title: "Stone chip",
-      status: "Often repairable",
-      tone: "repair",
-      copy: "Small, isolated chips away from the edge and the driver’s critical view can often be stabilised with resin. Final suitability depends on the actual damage and vehicle."
+      status: "Often leads to replacement",
+      tone: "replace",
+      copy: "A chip is often how replacement starts. Multiple chips, a chip in the driver’s view, or a chip that has begun to run are common reasons to fit new glass."
     },
     view: {
       title: "Driver’s view",
-      status: "Needs assessment",
-      tone: "assess",
-      copy: "Damage in the driver’s direct view needs a careful look. Repair may still be possible, but replacement can be the safer recommendation if visibility is affected."
+      status: "Replacement typically needed",
+      tone: "replace",
+      copy: "Damage in the driver’s direct view affects safe visibility. Replacement is the service we offer."
     },
     edge: {
       title: "Edge area",
-      status: "Replacement may be recommended",
+      status: "Replacement typically needed",
       tone: "replace",
-      copy: "Damage that reaches the windscreen edge can compromise integrity. Replacement is often the more appropriate route, subject to assessment."
+      copy: "Damage that reaches the windscreen edge can compromise integrity. Replacement is the appropriate route."
     },
     crack: {
       title: "Long crack",
-      status: "Replacement may be recommended",
+      status: "Replacement typically needed",
       tone: "replace",
-      copy: "A long or spreading crack is typically beyond a reliable resin repair. Send a photo so we can confirm before anyone travels to the vehicle."
+      copy: "A long or spreading crack means new glass. Send a photo so we can quote before anyone travels to the vehicle."
     },
     centre: {
       title: "Centre area",
-      status: "Needs assessment",
-      tone: "assess",
-      copy: "The centre of the windscreen sits in the main viewing area. Size, depth and whether a crack has started all influence the next step."
+      status: "Replacement typically needed",
+      tone: "replace",
+      copy: "The centre of the windscreen sits in the main viewing area. Chips or cracks here are typical replacement conditions."
     }
   };
 

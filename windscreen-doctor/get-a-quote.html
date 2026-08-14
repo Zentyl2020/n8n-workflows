@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0A0A0A">
-  <meta name="description" content="Request a mobile windscreen chip repair or replacement quotation from Windscreen Doctor. Send a photo and vehicle details.">
+  <meta name="description" content="Request a mobile windscreen replacement quotation from Windscreen Doctor. Send a photo and vehicle details.">
   <title>Request a Windscreen Quote | Windscreen Doctor</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +21,6 @@
       </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu"><span class="menu-toggle-bars"></span></button>
       <ul class="nav-list" id="site-menu">
-        <li><a href="chip-repair.html">Repair</a></li>
         <li><a href="windscreen-replacement.html">Replacement</a></li>
         <li><a href="how-it-works.html">How It Works</a></li>
         <li><a href="areas-we-serve.html">Coverage</a></li>
@@ -39,7 +38,7 @@
         <div class="subhero-copy">
           <p class="kicker">Quote assessment</p>
           <h1>Show us what happened.</h1>
-          <p>Provide a few details and a photograph so the damage, vehicle and location can be assessed without unnecessary back-and-forth.</p>
+          <p>Provide a few details and a photograph so we can quote for replacement at your location — metro, town or site.</p>
         </div>
         <div class="subhero-media"><img src="assets/chip-macro.webp" alt="Close-up of windscreen chip damage" width="1536" height="1024"></div>
       </div>
@@ -61,7 +60,7 @@
                 <div class="form-grid">
                   <div class="field"><label for="name">Full name *</label><input id="name" name="name" autocomplete="name" required placeholder="e.g. Thabo Ndlovu"></div>
                   <div class="field"><label for="mobile">Mobile number *</label><input id="mobile" name="mobile" type="tel" autocomplete="tel" required placeholder="082 000 0000"></div>
-                  <div class="field"><label for="suburb">Suburb *</label><input id="suburb" name="suburb" autocomplete="address-level3" required placeholder="Where is the vehicle?"></div>
+                  <div class="field"><label for="suburb">Suburb or town *</label><input id="suburb" name="suburb" autocomplete="address-level3" required placeholder="Including smaller towns"></div>
                   <div class="field"><label for="city">City</label><input id="city" name="city" autocomplete="address-level2" placeholder="Johannesburg"></div>
                   <div class="field"><label for="province">Province *</label><select id="province" name="province" required><option value="">Select province</option><option>Eastern Cape</option><option>Free State</option><option>Gauteng</option><option>KwaZulu-Natal</option><option>Limpopo</option><option>Mpumalanga</option><option>North West</option><option>Northern Cape</option><option>Western Cape</option></select></div>
                   <div class="field"><label for="postcode">Postcode</label><input id="postcode" name="postcode" inputmode="numeric" autocomplete="postal-code" placeholder="Optional"></div>
@@ -69,7 +68,8 @@
                 <div class="step-nav"><button class="btn btn-primary" type="button" data-next>Continue</button></div>
               </fieldset>
               <fieldset data-step="2">
-                <h3>What is the vehicle?</h3>
+                <h3>What needs glass?</h3>
+                <div class="field" style="margin-bottom:16px"><label for="vehicle-type">Vehicle type</label><select id="vehicle-type" name="vehicle_type"><option value="">Select if known</option><option>Passenger car / SUV</option><option>Bakkie / light commercial</option><option>Yellow metal / plant</option><option>Other</option></select></div>
                 <div class="form-grid three">
                   <div class="field"><label for="vehicle-year">Year *</label><input id="vehicle-year" name="vehicle_year" inputmode="numeric" required placeholder="2020"></div>
                   <div class="field"><label for="vehicle-make">Make *</label><input id="vehicle-make" name="vehicle_make" required placeholder="Toyota"></div>
@@ -82,7 +82,7 @@
                 <h3>What does the damage look like?</h3>
                 <div class="field"><span class="field-label">Type of damage *</span>
                   <div class="damage-options">
-                    <label class="damage-option"><input type="radio" name="damage" value="Chip repair" required><span>Chip</span></label>
+                    <label class="damage-option"><input type="radio" name="damage" value="Chip" required><span>Chip(s)</span></label>
                     <label class="damage-option"><input type="radio" name="damage" value="Crack"><span>Crack</span></label>
                     <label class="damage-option"><input type="radio" name="damage" value="Smashed"><span>Shattered</span></label>
                     <label class="damage-option"><input type="radio" name="damage" value="Unsure"><span>Unknown</span></label>
@@ -112,8 +112,8 @@
 
   <footer class="site-footer">
     <div class="container footer-grid">
-      <div><a class="logo" href="index.html"><span class="logo-type">Windscreen <strong>Doctor</strong></span></a><p>Mobile chip repair and windscreen replacement across South Africa. Phone and WhatsApp details will be published once confirmed.</p></div>
-      <div><h3>Services</h3><ul><li><a href="chip-repair.html">Repair</a></li><li><a href="windscreen-replacement.html">Replacement</a></li><li><a href="areas-we-serve.html">Coverage</a></li></ul></div>
+      <div><a class="logo" href="index.html"><span class="logo-type">Windscreen <strong>Doctor</strong></span></a><p>Nationwide mobile windscreen replacement across South Africa. Phone and WhatsApp details will be published once confirmed.</p></div>
+      <div><h3>Services</h3><ul><li><a href="windscreen-replacement.html">Replacement</a></li><li><a href="areas-we-serve.html">Coverage</a></li></ul></div>
       <div><h3>Help</h3><ul><li><a href="how-it-works.html">How it works</a></li><li><a href="faq.html">FAQ</a></li><li><a href="get-a-quote.html">Contact</a></li></ul></div>
       <div><h3>Legal</h3><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms</a></li></ul></div>
     </div>

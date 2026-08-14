@@ -28,35 +28,45 @@ Confirm those details before production launch. The quotation form is an
 interactive demonstration and does not submit or store customer data.
 Phone and WhatsApp numbers are left unpublished until confirmed.
 
+Chip repair is **not currently offered**. The previous chip-repair page is
+saved in `archive/chip-repair.html` for a later return.
+
+Current live positioning:
+
+- Nationwide mobile **windscreen replacement**
+- Seven days a week
+- Cars, bakkies and yellow metal / plant
+- Towns and outlying sites, not only metros
+
 ## Quote form fields
 
 Preserved IDs and names:
 
 - `name`, `mobile`, `province`, `suburb`
 - `vehicle-year` / `vehicle_year`, `vehicle-make` / `vehicle_make`, `vehicle-model` / `vehicle_model`
-- `damage` values: `Chip repair`, `Crack`, `Smashed`, `Unsure`
+- `damage` values: `Chip`, `Crack`, `Smashed`, `Unsure` (was `Chip repair`; now describes damage, not a service)
 - `photo`, `notes`
 
 Added optional fields (do not exist in any live backend yet):
 
-- `city`, `postcode`, `vehicle-variant`, `damage-size`, `damage-position`
+- `city`, `postcode`, `vehicle-variant`, `vehicle-type`, `damage-size`, `damage-position`
 
 Suburb handoff from `areas-we-serve.html?suburb=` is unchanged.
 
 ## WordPress handoff
 
 1. Homepage
-2. Windscreen chip repair
-3. Windscreen replacement
-4. Mobile fitment
-5. How it works
-6. Areas we serve
-7. Frequently asked questions
-8. Request a quote
-9. Glass care tips archive
-10. Glass care article
-11. Privacy Policy (placeholder)
-12. Terms (placeholder)
+2. Windscreen replacement
+3. Mobile fitment
+4. How it works
+5. Areas we serve
+6. Frequently asked questions
+7. Request a quote
+8. Glass care tips archive
+9. Glass care article
+10. Privacy Policy (placeholder)
+11. Terms (placeholder)
+12. Chip repair stub (points to replacement; full page in `archive/`)
 
 ## Brand tokens
 
