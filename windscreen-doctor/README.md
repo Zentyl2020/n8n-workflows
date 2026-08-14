@@ -60,13 +60,20 @@ Suburb handoff from `areas-we-serve.html?suburb=` is unchanged.
 3. Mobile fitment
 4. How it works
 5. Areas we serve
-6. Frequently asked questions
-7. Request a quote
-8. Glass care tips archive
-9. Glass care article
-10. Privacy Policy (placeholder)
-11. Terms (placeholder)
-12. Chip repair stub (points to replacement; full page in `archive/`)
+6. Blog (listing)
+7. Article: When a windscreen needs replacing
+8. Article: How to stop a chip spreading
+9. Article: Mobile replacement vs a fitment centre
+10. Article: Yellow metal and plant glass
+11. Article: Driving with a cracked windscreen
+12. Frequently asked questions
+13. Request a quote
+14. Glass care tips (redirects to blog)
+15. Privacy Policy (placeholder)
+16. Terms (placeholder)
+17. Chip repair stub (points to replacement; full page in `archive/`)
+
+`robots.txt` and `sitemap.xml` assume the live host `https://windscreendoctor.co.za/`. Update those URLs if the production path differs.
 
 ## Brand tokens
 
