@@ -95,8 +95,7 @@
     <section class="section" id="visualiser" style="background:var(--white)">
       <div class="container visualiser" data-visualiser>
         <div class="windscreen-board reveal">
-          <svg class="windscreen-svg" viewBox="0 0 640 360" role="img" aria-labelledby="viz-title">
-            <title id="viz-title">Interactive windscreen damage zones</title>
+          <svg class="windscreen-svg" viewBox="0 0 640 360" role="img" aria-label="Interactive windscreen damage zones">
             <rect x="0" y="0" width="640" height="360" fill="#f7f7f5"/>
             <path d="M92 46h456l46 252H46Z" fill="#d8dee3" stroke="#0a0a0a" stroke-width="3"/>
             <path class="zone zone-edge" data-zone="edge" tabindex="0" role="button" aria-label="Edge area" d="M92 46h456l46 252H46Z" fill="rgba(176,48,48,.16)" stroke="#a33"/>
@@ -235,7 +234,7 @@
               </fieldset>
               <fieldset data-step="4">
                 <h3>Upload a clear photo of the damage</h3>
-                <div class="field full"><label class="file-drop" for="photo"><strong id="file-label">Upload a clear photo of the damage</strong><br><small>Use the camera on mobile, or choose a file. JPG, PNG or HEIC.</small><input id="photo" name="photo" type="file" accept="image/*" capture="environment"></label></div>
+                <div class="field full"><label class="file-drop"><strong id="file-label">Upload a clear photo of the damage</strong><br><small>Use the camera on mobile, or choose a file. JPG, PNG or HEIC.</small><input id="photo" name="photo" type="file" accept="image/*" capture="environment"></label></div>
                 <div class="field full" style="margin-top:16px"><label for="notes">Additional notes</label><textarea id="notes" name="notes" placeholder="Sensors, cameras, preferred appointment or anything else"></textarea></div>
                 <label class="consent" style="margin-top:18px"><input type="checkbox" required><span>I consent to Windscreen Doctor using these details to assess my request and contact me about this quotation. This prototype does not transmit or store the information entered.</span></label>
                 <div class="form-actions"><button class="btn btn-outline light" type="button" data-back>Back</button><button class="btn btn-primary" type="submit">Request My Quote</button></div>
