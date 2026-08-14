@@ -419,5 +419,31 @@
     <a class="btn btn-primary" href="#quote">Send Photo</a>
   </div>
   <script src="assets/pages.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutomotiveBusiness",
+    "name": "Windscreen Doctor",
+    "url": "https://windscreendoctor.co.za/",
+    "image": "https://windscreendoctor.co.za/wp-content/uploads/2026/08/hero-cinematic.webp",
+    "logo": "https://windscreendoctor.co.za/wp-content/uploads/2026/08/favicon.svg",
+    "description": "Nationwide mobile windscreen replacement. Any vehicle, anywhere in South Africa, any day.",
+    "areaServed": { "@type": "Country", "name": "South Africa" },
+    "address": { "@type": "PostalAddress", "addressCountry": "ZA" },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Mobile windscreen replacement",
+      "itemListElement": [{
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mobile windscreen replacement",
+          "serviceType": "Windscreen replacement",
+          "areaServed": { "@type": "Country", "name": "South Africa" }
+        }
+      }]
+    }
+  }
+  </script>
 </body>
 </html>
