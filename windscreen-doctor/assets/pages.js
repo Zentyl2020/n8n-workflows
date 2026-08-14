@@ -1,5 +1,6 @@
 const menuButton = document.querySelector(".menu-toggle");
 const menu = document.querySelector(".nav-list");
+const header = document.querySelector("[data-header], .site-header");
 
 function closeMenu() {
   if (!menu || !menuButton) return;
@@ -18,6 +19,13 @@ if (menuButton && menu) {
   });
   menu.querySelectorAll("a").forEach(link => link.addEventListener("click", closeMenu));
 }
+
+function updateHeader() {
+  if (!header) return;
+  header.classList.toggle("is-scrolled", window.scrollY > 12);
+}
+updateHeader();
+window.addEventListener("scroll", updateHeader, { passive: true });
 
 document.querySelectorAll(".faq-question").forEach(button => {
   button.addEventListener("click", () => {
@@ -42,7 +50,7 @@ if (fileInput && fileLabel) {
   fileInput.addEventListener("change", () => {
     fileLabel.textContent = fileInput.files.length
       ? fileInput.files[0].name
-      : "Take a photo or choose an image";
+      : "Upload a clear photo of the damage";
   });
 }
 
@@ -52,8 +60,70 @@ if (quoteForm) {
   const suburbField = quoteForm.querySelector("#suburb");
   if (suburbFromUrl && suburbField) suburbField.value = suburbFromUrl;
 
+  const steps = [...quoteForm.querySelectorAll("[data-step]")];
+  const navButtons = [...quoteForm.querySelectorAll("[data-goto]")];
+
+  function showStep(index) {
+    if (!steps.length) return;
+    steps.forEach((step, i) => step.classList.toggle("is-active", i === index));
+    navButtons.forEach((button, i) => {
+      button.classList.toggle("is-active", i === index);
+      button.classList.toggle("is-done", i < index);
+    });
+  }
+
+  function currentIndex() {
+    return Math.max(0, steps.findIndex(step => step.classList.contains("is-active")));
+  }
+
+  function validateStep(step) {
+    const fields = [...step.querySelectorAll("input, select, textarea")].filter(field => field.hasAttribute("required") || field.type === "radio");
+    let valid = true;
+    const radioGroups = new Set();
+    fields.forEach(field => {
+      if (field.type === "radio") {
+        radioGroups.add(field.name);
+        return;
+      }
+      const ok = field.checkValidity();
+      field.classList.toggle("is-invalid", !ok);
+      if (!ok) valid = false;
+    });
+    radioGroups.forEach(name => {
+      const group = [...step.querySelectorAll(`input[name="${name}"]`)];
+      const ok = group.some(input => input.checked);
+      group.forEach(input => input.closest(".damage-option")?.classList.toggle("is-invalid", !ok));
+      if (!ok) valid = false;
+    });
+    if (!valid) {
+      const firstInvalid = step.querySelector(".is-invalid, input:invalid, select:invalid, textarea:invalid");
+      firstInvalid?.focus();
+    }
+    return valid;
+  }
+
+  navButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      if (index > currentIndex() && !validateStep(steps[currentIndex()])) return;
+      showStep(index);
+    });
+  });
+
+  quoteForm.querySelectorAll("[data-next]").forEach(button => {
+    button.addEventListener("click", () => {
+      const index = currentIndex();
+      if (!validateStep(steps[index])) return;
+      showStep(Math.min(index + 1, steps.length - 1));
+    });
+  });
+
+  quoteForm.querySelectorAll("[data-back]").forEach(button => {
+    button.addEventListener("click", () => showStep(Math.max(currentIndex() - 1, 0)));
+  });
+
   quoteForm.addEventListener("submit", event => {
     event.preventDefault();
+    if (steps.length && !validateStep(steps[currentIndex()])) return;
     const content = quoteForm.querySelector(".form-content");
     const success = quoteForm.querySelector(".form-success");
     if (content && success) {
@@ -62,6 +132,79 @@ if (quoteForm) {
       quoteForm.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   });
+}
+
+const visualiser = document.querySelector("[data-visualiser]");
+if (visualiser) {
+  const title = visualiser.querySelector("[data-viz-title]");
+  const status = visualiser.querySelector("[data-viz-status]");
+  const copy = visualiser.querySelector("[data-viz-copy]");
+  const zones = [...visualiser.querySelectorAll("[data-zone]")];
+
+  const details = {
+    chip: {
+      title: "Stone chip",
+      status: "Often repairable",
+      tone: "repair",
+      copy: "Small, isolated chips away from the edge and the driver’s critical view can often be stabilised with resin. Final suitability depends on the actual damage and vehicle."
+    },
+    view: {
+      title: "Driver’s view",
+      status: "Needs assessment",
+      tone: "assess",
+      copy: "Damage in the driver’s direct view needs a careful look. Repair may still be possible, but replacement can be the safer recommendation if visibility is affected."
+    },
+    edge: {
+      title: "Edge area",
+      status: "Replacement may be recommended",
+      tone: "replace",
+      copy: "Damage that reaches the windscreen edge can compromise integrity. Replacement is often the more appropriate route, subject to assessment."
+    },
+    crack: {
+      title: "Long crack",
+      status: "Replacement may be recommended",
+      tone: "replace",
+      copy: "A long or spreading crack is typically beyond a reliable resin repair. Send a photo so we can confirm before anyone travels to the vehicle."
+    },
+    centre: {
+      title: "Centre area",
+      status: "Needs assessment",
+      tone: "assess",
+      copy: "The centre of the windscreen sits in the main viewing area. Size, depth and whether a crack has started all influence the next step."
+    }
+  };
+
+  function activate(name) {
+    const data = details[name];
+    if (!data) return;
+    zones.forEach(zone => zone.classList.toggle("is-active", zone.getAttribute("data-zone") === name));
+    if (title) title.textContent = data.title;
+    if (status) {
+      status.textContent = data.status;
+      status.className = `viz-status ${data.tone}`;
+    }
+    if (copy) copy.textContent = data.copy;
+  }
+
+  zones.forEach(zone => {
+    const name = zone.getAttribute("data-zone");
+    zone.addEventListener("click", () => activate(name));
+    zone.addEventListener("mouseenter", () => activate(name));
+    zone.addEventListener("focus", () => activate(name));
+  });
+  activate("chip");
+}
+
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-in");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 }
 
 document.querySelectorAll("[data-year]").forEach(element => {

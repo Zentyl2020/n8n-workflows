@@ -1,69 +1,125 @@
 <!doctype html>
 <html lang="en-ZA">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Request a mobile windscreen chip repair or replacement quotation from Windscreen Doctor.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0A0A0A">
+  <meta name="description" content="Request a mobile windscreen chip repair or replacement quotation from Windscreen Doctor. Send a photo and vehicle details.">
   <title>Request a Windscreen Quote | Windscreen Doctor</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/pages.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/pages.css">
 </head>
 <body>
-  <div class="utility">Nationwide mobile windscreen service across South Africa</div>
-  <header class="site-header"><nav class="container nav" aria-label="Primary navigation">
-    <a class="logo" href="index.html"><svg viewBox="0 0 78 62"><path d="M39 3 69 16v18c0 14-12 23-30 27C21 57 9 48 9 34V16L39 3Z" fill="none" stroke="#fff" stroke-width="4"/><path d="M16 29c14-7 32-7 46 0l-5 17c-12 5-24 5-36 0l-5-17Z" fill="#092e3e" stroke="#00a6a6" stroke-width="4"/></svg><span class="logo-type">Windscreen <strong>Doctor</strong></span></a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open menu"><span>☰</span></button>
-    <ul class="nav-list"><li><a href="chip-repair.html">Chip Repair</a></li><li><a href="windscreen-replacement.html">Replacement</a></li><li><a href="mobile-fitment.html">Mobile Fitment</a></li><li><a href="how-it-works.html">How It Works</a></li><li><a href="areas-we-serve.html">Areas</a></li><li><a href="faq.html">FAQs</a></li><li><a class="btn btn-primary active" href="get-a-quote.html">Get a Quote</a></li></ul>
-  </nav></header>
+  <header class="site-header" data-header>
+    <nav class="container nav" aria-label="Primary navigation">
+      <a class="logo" href="index.html" aria-label="Windscreen Doctor home">
+        <svg viewBox="0 0 78 62" aria-hidden="true"><path d="M39 3 69 16v18c0 14-12 23-30 27C21 57 9 48 9 34V16L39 3Z" fill="none" stroke="#fff" stroke-width="4"/><path d="M16 29c14-7 32-7 46 0l-5 17c-12 5-24 5-36 0l-5-17Z" fill="#0A0A0A" stroke="#00a6a6" stroke-width="4"/><path d="m55 18 2 7 7 2-7 2-2 7-2-7-7-2 7-2 2-7Z" fill="#f6a800"/></svg>
+        <span class="logo-type">Windscreen <strong>Doctor</strong></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu"><span class="menu-toggle-bars"></span></button>
+      <ul class="nav-list" id="site-menu">
+        <li><a href="chip-repair.html">Repair</a></li>
+        <li><a href="windscreen-replacement.html">Replacement</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="areas-we-serve.html">Coverage</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a class="active" href="get-a-quote.html">Contact</a></li>
+        <li class="nav-secondary"><a class="btn btn-ghost" href="get-a-quote.html">Get a Quote</a></li>
+        <li><a class="btn btn-primary" href="#quote-form">Send a Photo</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main>
-    <section class="subhero full" style="background-image:url('assets/cracked-windscreen.webp')"><div class="container"><div class="subhero-copy"><h1>Show us what happened.</h1><p>Provide a few details and photographs so the damage, vehicle and location can be assessed without unnecessary back-and-forth.</p></div></div></section>
+    <section class="subhero">
+      <div class="container subhero-grid">
+        <div class="subhero-copy">
+          <p class="kicker">Quote assessment</p>
+          <h1>Show us what happened.</h1>
+          <p>Provide a few details and a photograph so the damage, vehicle and location can be assessed without unnecessary back-and-forth.</p>
+        </div>
+        <div class="subhero-media"><img src="assets/chip-macro.webp" alt="Close-up of windscreen chip damage" width="1536" height="1024"></div>
+      </div>
+    </section>
 
-    <section class="section">
-      <div class="container quote-layout">
-        <form class="quote-form" id="quote-form">
-          <div class="form-content">
-            <div class="form-section">
-              <div class="form-title"><span>1</span><h2>Your details</h2></div>
-              <div class="form-grid">
-                <div class="field"><label for="name">Full name *</label><input id="name" name="name" autocomplete="name" required placeholder="e.g. Thabo Ndlovu"></div>
-                <div class="field"><label for="mobile">Mobile number *</label><input id="mobile" name="mobile" type="tel" autocomplete="tel" required placeholder="082 000 0000"></div>
-                <div class="field"><label for="province">Province *</label><select id="province" name="province" required><option value="">Select province</option><option>Eastern Cape</option><option>Free State</option><option>Gauteng</option><option>KwaZulu-Natal</option><option>Limpopo</option><option>Mpumalanga</option><option>North West</option><option>Northern Cape</option><option>Western Cape</option></select></div>
-                <div class="field"><label for="suburb">City or suburb *</label><input id="suburb" name="suburb" autocomplete="address-level2" required placeholder="Where is the vehicle?"></div>
-              </div>
+    <section class="section quote-band" style="padding-top:72px">
+      <div class="container">
+        <form class="assess-form" id="quote-form" novalidate>
+          <div class="form-content assess">
+            <div class="assess-progress" role="tablist" aria-label="Quote steps">
+              <button type="button" data-goto="0" class="is-active">01 Location</button>
+              <button type="button" data-goto="1">02 Vehicle</button>
+              <button type="button" data-goto="2">03 Damage</button>
+              <button type="button" data-goto="3">04 Photo</button>
             </div>
-
-            <div class="form-section">
-              <div class="form-title"><span>2</span><h2>Vehicle details</h2></div>
-              <div class="form-grid three">
-                <div class="field"><label for="vehicle-year">Year *</label><input id="vehicle-year" name="vehicle_year" inputmode="numeric" required placeholder="2020"></div>
-                <div class="field"><label for="vehicle-make">Make *</label><input id="vehicle-make" name="vehicle_make" required placeholder="Toyota"></div>
-                <div class="field"><label for="vehicle-model">Model *</label><input id="vehicle-model" name="vehicle_model" required placeholder="Hilux"></div>
-              </div>
-            </div>
-
-            <div class="form-section">
-              <div class="form-title"><span>3</span><h2>Damage assessment</h2></div>
-              <div class="field"><span class="field-label">Type of damage *</span><div class="damage-options">
-                <label class="damage-option"><input type="radio" name="damage" value="Chip repair" required><span>Chip repair</span></label>
-                <label class="damage-option"><input type="radio" name="damage" value="Crack"><span>Long crack</span></label>
-                <label class="damage-option"><input type="radio" name="damage" value="Smashed"><span>Smashed</span></label>
-                <label class="damage-option"><input type="radio" name="damage" value="Unsure"><span>Not sure</span></label>
-              </div></div>
-              <div class="field full" style="margin-top:17px"><label for="photo">Photograph of the damage</label><label class="file-drop" for="photo"><strong id="file-label">Take a photo or choose an image</strong><br><small>JPG, PNG or HEIC</small><input id="photo" name="photo" type="file" accept="image/*"></label></div>
-              <div class="field full" style="margin-top:17px"><label for="notes">Additional notes</label><textarea id="notes" name="notes" placeholder="Damage location, sensors or preferred appointment details"></textarea></div>
-              <label class="consent" style="margin-top:18px"><input type="checkbox" required><span>I consent to Windscreen Doctor using these details to assess my request and contact me about this quotation. This prototype does not transmit or store the information entered.</span></label>
-              <div class="form-actions"><button class="btn btn-primary" type="submit">Request My Quote</button><button class="btn btn-secondary" type="button" disabled title="Connect the business WhatsApp number to activate">WhatsApp Option</button></div>
+            <div>
+              <fieldset data-step="1" class="is-active">
+                <h3>Where is the vehicle?</h3>
+                <div class="form-grid">
+                  <div class="field"><label for="name">Full name *</label><input id="name" name="name" autocomplete="name" required placeholder="e.g. Thabo Ndlovu"></div>
+                  <div class="field"><label for="mobile">Mobile number *</label><input id="mobile" name="mobile" type="tel" autocomplete="tel" required placeholder="082 000 0000"></div>
+                  <div class="field"><label for="suburb">Suburb *</label><input id="suburb" name="suburb" autocomplete="address-level3" required placeholder="Where is the vehicle?"></div>
+                  <div class="field"><label for="city">City</label><input id="city" name="city" autocomplete="address-level2" placeholder="Johannesburg"></div>
+                  <div class="field"><label for="province">Province *</label><select id="province" name="province" required><option value="">Select province</option><option>Eastern Cape</option><option>Free State</option><option>Gauteng</option><option>KwaZulu-Natal</option><option>Limpopo</option><option>Mpumalanga</option><option>North West</option><option>Northern Cape</option><option>Western Cape</option></select></div>
+                  <div class="field"><label for="postcode">Postcode</label><input id="postcode" name="postcode" inputmode="numeric" autocomplete="postal-code" placeholder="Optional"></div>
+                </div>
+                <div class="step-nav"><button class="btn btn-primary" type="button" data-next>Continue</button></div>
+              </fieldset>
+              <fieldset data-step="2">
+                <h3>What is the vehicle?</h3>
+                <div class="form-grid three">
+                  <div class="field"><label for="vehicle-year">Year *</label><input id="vehicle-year" name="vehicle_year" inputmode="numeric" required placeholder="2020"></div>
+                  <div class="field"><label for="vehicle-make">Make *</label><input id="vehicle-make" name="vehicle_make" required placeholder="Toyota"></div>
+                  <div class="field"><label for="vehicle-model">Model *</label><input id="vehicle-model" name="vehicle_model" required placeholder="Hilux"></div>
+                </div>
+                <div class="field" style="margin-top:16px"><label for="vehicle-variant">Variant</label><input id="vehicle-variant" name="vehicle_variant" placeholder="Optional, if known"></div>
+                <div class="step-nav"><button class="btn btn-outline light" type="button" data-back>Back</button><button class="btn btn-primary" type="button" data-next>Continue</button></div>
+              </fieldset>
+              <fieldset data-step="3">
+                <h3>What does the damage look like?</h3>
+                <div class="field"><span class="field-label">Type of damage *</span>
+                  <div class="damage-options">
+                    <label class="damage-option"><input type="radio" name="damage" value="Chip repair" required><span>Chip</span></label>
+                    <label class="damage-option"><input type="radio" name="damage" value="Crack"><span>Crack</span></label>
+                    <label class="damage-option"><input type="radio" name="damage" value="Smashed"><span>Shattered</span></label>
+                    <label class="damage-option"><input type="radio" name="damage" value="Unsure"><span>Unknown</span></label>
+                  </div>
+                </div>
+                <div class="form-grid" style="margin-top:16px">
+                  <div class="field"><label for="damage-size">Approximate size</label><input id="damage-size" name="damage_size" placeholder="Optional"></div>
+                  <div class="field"><label for="damage-position">Damage position</label><select id="damage-position" name="damage_position"><option value="">Select if known</option><option>Driver’s view</option><option>Centre</option><option>Passenger side</option><option>Near the edge</option><option>Unknown</option></select></div>
+                </div>
+                <div class="step-nav"><button class="btn btn-outline light" type="button" data-back>Back</button><button class="btn btn-primary" type="button" data-next>Continue</button></div>
+              </fieldset>
+              <fieldset data-step="4">
+                <h3>Upload a clear photo of the damage</h3>
+                <div class="field full"><label class="file-drop" for="photo"><strong id="file-label">Upload a clear photo of the damage</strong><br><small>Use the camera on mobile, or choose a file. JPG, PNG or HEIC.</small><input id="photo" name="photo" type="file" accept="image/*" capture="environment"></label></div>
+                <div class="field full" style="margin-top:16px"><label for="notes">Additional notes</label><textarea id="notes" name="notes" placeholder="Sensors, cameras, preferred appointment or anything else"></textarea></div>
+                <label class="consent" style="margin-top:18px"><input type="checkbox" required><span>I consent to Windscreen Doctor using these details to assess my request and contact me about this quotation. This prototype does not transmit or store the information entered.</span></label>
+                <div class="form-actions"><button class="btn btn-outline light" type="button" data-back>Back</button><button class="btn btn-primary" type="submit">Request My Quote</button></div>
+                <p class="whatsapp-note">Prefer WhatsApp? Send the photo directly once the business number is connected. The WhatsApp option is not live on this prototype.</p>
+              </fieldset>
             </div>
           </div>
-          <div class="form-success"><h3>Quotation journey complete.</h3><p>This prototype does not transmit data yet. Connect the WordPress form or business WhatsApp number to activate submissions.</p><a class="btn btn-secondary" href="index.html">Return Home</a></div>
+          <div class="form-success"><h3>Quotation journey complete.</h3><p>This prototype does not transmit data yet. Connect the WordPress form or business WhatsApp number to activate submissions.</p><a class="btn btn-primary" href="index.html">Return Home</a></div>
         </form>
-
-        <aside class="quote-help"><h2 style="font-size:1.55rem">Why a photo helps</h2><p>Clear images and vehicle information make the first response more useful.</p><ul><li>Whole-windscreen photo shows the location</li><li>Close-up shows the damage pattern</li><li>Vehicle details help identify the glass</li><li>Suburb allows an availability check</li></ul><img src="assets/hero-technician.webp" alt="Mobile technician at a customer location" width="819" height="458" loading="lazy" style="margin-top:24px;border-radius:12px"></aside>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer"><div class="container footer-grid"><div><span class="logo-type">Windscreen <strong>Doctor</strong></span><p>Clearly better. We come to you.</p></div><div><h3>Services</h3><ul><li><a href="chip-repair.html">Chip repair</a></li><li><a href="windscreen-replacement.html">Replacement</a></li></ul></div><div><h3>Explore</h3><ul><li><a href="areas-we-serve.html">Areas</a></li><li><a href="faq.html">FAQs</a></li></ul></div><div><h3>Helpful</h3><ul><li><a href="glass-care-tips.html">Care tips</a></li></ul></div></div><div class="container footer-bottom">© <span data-year></span> Windscreen Doctor.</div></footer>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><a class="logo" href="index.html"><span class="logo-type">Windscreen <strong>Doctor</strong></span></a><p>Mobile chip repair and windscreen replacement across South Africa. Phone and WhatsApp details will be published once confirmed.</p></div>
+      <div><h3>Services</h3><ul><li><a href="chip-repair.html">Repair</a></li><li><a href="windscreen-replacement.html">Replacement</a></li><li><a href="areas-we-serve.html">Coverage</a></li></ul></div>
+      <div><h3>Help</h3><ul><li><a href="how-it-works.html">How it works</a></li><li><a href="faq.html">FAQ</a></li><li><a href="get-a-quote.html">Contact</a></li></ul></div>
+      <div><h3>Legal</h3><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms</a></li></ul></div>
+    </div>
+    <div class="container footer-bottom">© <span data-year></span> Windscreen Doctor. Interactive website concept.</div>
+  </footer>
+  <div class="mobile-actions"><a class="btn btn-outline" href="#quote-form">Get a Quote</a><a class="btn btn-primary" href="#quote-form">Send Photo</a></div>
   <script src="assets/pages.js"></script>
 </body>
 </html>
