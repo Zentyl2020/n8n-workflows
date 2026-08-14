@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0A0A0A">
-  <meta name="description" content="Mobile windscreen chip repair and replacement at your home or workplace across South Africa. Send a photo for a clear assessment.">
-  <title>Windscreen Doctor | Mobile Windscreen Repair & Replacement</title>
+  <meta name="description" content="Mobile windscreen replacement for any vehicle, anywhere in South Africa, any day. Yellow metal, luxury cars, passenger vehicles and bakkies.">
+  <title>Windscreen Doctor | Nationwide Mobile Windscreen Replacement</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,10 +21,10 @@
       </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu"><span class="menu-toggle-bars"></span></button>
       <ul class="nav-list" id="site-menu">
-        <li><a href="chip-repair.html">Repair</a></li>
         <li><a href="windscreen-replacement.html">Replacement</a></li>
         <li><a href="how-it-works.html">How It Works</a></li>
         <li><a href="areas-we-serve.html">Coverage</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="faq.html">FAQ</a></li>
         <li><a href="get-a-quote.html">Contact</a></li>
         <li class="nav-secondary"><a class="btn btn-ghost" href="#quote">Get a Quote</a></li>
@@ -36,13 +36,19 @@
   <main>
     <section class="hero" aria-label="Introduction">
       <div class="hero-media">
-        <img src="assets/hero-cinematic.webp" alt="Mobile technician repairing a windscreen on a South African driveway" width="1536" height="1024" fetchpriority="high">
+        <img src="assets/hero-cinematic.webp" alt="Mobile technician replacing a windscreen on a South African driveway" width="1536" height="1024" fetchpriority="high">
       </div>
       <div class="hero-shine" aria-hidden="true"></div>
       <div class="container hero-copy">
-        <p class="kicker">Mobile windscreen specialists</p>
-        <h1>Chipped <span>or cracked?</span></h1>
-        <p class="support"><strong style="color:#fff;font-weight:520">We come to you.</strong> Send us a photo and your vehicle details. We’ll help determine whether repair or replacement is the sensible option.</p>
+        <p class="kicker">Windscreen Doctor · Mobile replacement</p>
+        <h1>Any vehicle. <span>Anywhere in the country. Any day.</span></h1>
+        <p class="support"><strong style="color:#fff;font-weight:520">We replace the windscreen. We come to you.</strong> Yellow metal, luxury cars, passenger vehicles and bakkies — seven days a week, across South Africa.</p>
+        <div class="hero-fleet" aria-label="Vehicles we cover">
+          <span>Yellow metal</span>
+          <span>Luxury cars</span>
+          <span>Passenger</span>
+          <span>Bakkies</span>
+        </div>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#quote">Send a Photo</a>
           <a class="btn btn-outline light" href="#quote">Get a Quote</a>
@@ -50,91 +56,69 @@
       </div>
     </section>
 
-    <section class="section" id="repair-or-replace">
-      <div class="container">
-        <div class="section-head reveal">
-          <h2>Not every damaged windscreen needs replacing.</h2>
-          <p>A chip does not always mean a new windscreen. Clear solutions start with a clear look at the damage.</p>
-        </div>
-        <div class="pair reveal">
-          <article class="pair-card">
-            <img src="assets/chip-macro.webp" alt="Close-up of a stone chip in laminated windscreen glass" width="1536" height="1024" loading="lazy">
-            <div class="pair-body">
-              <p class="pair-label">Chip repair</p>
-              <h3>Keep the original glass when the damage allows it.</h3>
-              <p>Repair may be suitable where:</p>
-              <ul>
-                <li>The damage is small and isolated</li>
-                <li>A crack has not spread significantly</li>
-                <li>The damage is away from the edge</li>
-                <li>It does not compromise the critical viewing area</li>
-              </ul>
-              <a class="btn btn-outline" href="chip-repair.html">Explore chip repair</a>
-            </div>
-          </article>
-          <article class="pair-card replace">
-            <img src="assets/crack-macro.webp" alt="Long crack spreading across a vehicle windscreen" width="1600" height="900" loading="lazy">
-            <div class="pair-body">
-              <p class="pair-label">Replacement</p>
-              <h3>When integrity or visibility is affected, replace the glass.</h3>
-              <p>Replacement may be needed where:</p>
-              <ul>
-                <li>The crack is long or spreading</li>
-                <li>Damage reaches the windscreen edge</li>
-                <li>Glass integrity is compromised</li>
-                <li>Damage interferes with safe visibility</li>
-              </ul>
-              <a class="btn btn-primary" href="windscreen-replacement.html">Explore replacement</a>
-            </div>
-          </article>
-        </div>
-        <p class="lede" style="margin-top:28px">Not sure? <a href="#quote" style="color:var(--accent-dark);text-decoration:underline">Send a photo and let us assess it.</a></p>
+    <section class="stats-strip" aria-label="Service highlights">
+      <div class="container stats-grid">
+        <div class="stat"><strong>Any vehicle</strong><span>Plant, luxury, passenger, bakkie</span></div>
+        <div class="stat"><strong>Anywhere</strong><span>Metros, towns and sites</span></div>
+        <div class="stat"><strong>Any day</strong><span>Seven days a week</span></div>
+        <div class="stat"><strong>Mobile</strong><span>We come to the vehicle</span></div>
       </div>
     </section>
 
-    <section class="section" id="visualiser" style="background:var(--white)">
-      <div class="container visualiser" data-visualiser>
-        <div class="windscreen-board reveal">
-          <svg class="windscreen-svg" viewBox="0 0 640 360" role="img" aria-label="Interactive windscreen damage zones">
-            <rect x="0" y="0" width="640" height="360" fill="#f7f7f5"/>
-            <path d="M92 46h456l46 252H46Z" fill="#d8dee3" stroke="#0a0a0a" stroke-width="3"/>
-            <path class="zone zone-edge" data-zone="edge" tabindex="0" role="button" aria-label="Edge area" d="M92 46h456l46 252H46Z" fill="rgba(176,48,48,.16)" stroke="#a33"/>
-            <path d="M128 78h384l28 188H100Z" fill="#cfd8de"/>
-            <rect class="zone zone-view" data-zone="view" tabindex="0" role="button" aria-label="Driver’s view" x="338" y="96" width="150" height="132" rx="8"/>
-            <rect class="zone" data-zone="centre" tabindex="0" role="button" aria-label="Centre area" x="236" y="110" width="88" height="108" rx="8" fill="rgba(246,168,0,.16)" stroke="#c88800"/>
-            <circle class="zone zone-chip" data-zone="chip" tabindex="0" role="button" aria-label="Stone chip" cx="176" cy="168" r="22"/>
-            <path class="zone zone-crack" data-zone="crack" tabindex="0" role="button" aria-label="Long crack" d="M198 172l86 18 120 44"/>
-            <text x="176" y="300" text-anchor="middle" fill="#5c5c5c" font-size="13" font-family="Inter, sans-serif">Passenger</text>
-            <text x="464" y="300" text-anchor="middle" fill="#5c5c5c" font-size="13" font-family="Inter, sans-serif">Driver (RHD)</text>
-          </svg>
+    <section class="section" id="vehicles">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker">Any vehicle</p>
+          <h2>All vehicles. That is the job.</h2>
+          <p>This site is windscreen replacement — not a chip-versus-crack menu. If it has a windscreen, send a photo. We quote for new glass and come to the vehicle.</p>
         </div>
-        <div class="viz-copy reveal">
-          <p class="kicker">Damage visualiser</p>
-          <h2>See where the damage sits.</h2>
-          <p class="viz-status repair" data-viz-status>Often repairable</p>
-          <h3 data-viz-title>Stone chip</h3>
-          <p data-viz-copy>Small, isolated chips away from the edge and the driver’s critical view can often be stabilised with resin. Final suitability depends on the actual damage and vehicle.</p>
-          <ul class="zone-list">
-            <li><button type="button" data-zone="chip">Stone chip <span>Often repairable</span></button></li>
-            <li><button type="button" data-zone="centre">Centre area <span>Needs assessment</span></button></li>
-            <li><button type="button" data-zone="view">Driver’s view <span>Needs assessment</span></button></li>
-            <li><button type="button" data-zone="edge">Edge area <span>Replacement may be recommended</span></button></li>
-            <li><button type="button" data-zone="crack">Long crack <span>Replacement may be recommended</span></button></li>
-          </ul>
-          <p class="viz-note">This is a guide, not a legal diagnosis. Final suitability depends on the actual damage and vehicle.</p>
+        <div class="fleet-grid reveal">
+          <article class="fleet-card replace">
+            <img src="assets/yellow-metal.webp" alt="Yellow construction equipment on a South African worksite" width="1600" height="1005" loading="lazy">
+            <div class="pair-body">
+              <p class="pair-label">Yellow metal</p>
+              <h3>Plant and construction</h3>
+              <p>Excavators, TLBs, loaders and other equipment that cannot visit a passenger-car workshop.</p>
+            </div>
+          </article>
+          <article class="fleet-card">
+            <img src="assets/trim-fitment.webp" alt="Careful windscreen trim work during replacement" width="1399" height="933" loading="lazy">
+            <div class="pair-body">
+              <p class="pair-label">Luxury</p>
+              <h3>Luxury cars</h3>
+              <p>Correct glass for the vehicle, including cameras and sensors where they apply.</p>
+            </div>
+          </article>
+          <article class="fleet-card">
+            <img src="assets/hero-cinematic.webp" alt="Passenger vehicle during mobile windscreen replacement" width="1536" height="1024" loading="lazy">
+            <div class="pair-body">
+              <p class="pair-label">Passenger</p>
+              <h3>Cars and small vehicles</h3>
+              <p>Everyday passenger glass, replaced at home, work or a suitable site.</p>
+            </div>
+          </article>
+          <article class="fleet-card">
+            <img src="assets/replacement-hero.webp" alt="Windscreen replacement on a light vehicle" width="1200" height="675" loading="lazy">
+            <div class="pair-body">
+              <p class="pair-label">Bakkies</p>
+              <h3>Bakkies and commercials</h3>
+              <p>Work vehicles that need to stay in service, including outside the metros.</p>
+            </div>
+          </article>
         </div>
+        <p class="lede" style="margin-top:28px"><a href="#quote" style="color:var(--accent-dark);text-decoration:underline">Send a photo</a> of the vehicle or machine. We quote for replacement.</p>
       </div>
     </section>
 
     <section class="media-banner" id="mobile">
-      <img src="assets/hero-technician.webp" alt="Mobile windscreen service at a customer location" width="1376" height="768" loading="lazy">
+      <img src="assets/hero-technician.webp" alt="Mobile windscreen replacement at a customer location" width="1376" height="768" loading="lazy">
       <div class="container media-banner-copy reveal">
-        <h2>Your car can stay where it is.</h2>
-        <p class="lede" style="color:rgba(255,255,255,.82)">We provide mobile windscreen repair and replacement in supported service areas. A damaged windscreen is disruptive enough. You should not also have to sit in a waiting room.</p>
+        <h2>Your vehicle can stay where it is.</h2>
+        <p class="lede" style="color:rgba(255,255,255,.82)">Mobile replacement seven days a week, at home, work or a suitable site. You should not have to lose a day at a city fitment centre.</p>
         <div class="place-row">
           <span class="place-chip">Home</span>
           <span class="place-chip">Work</span>
-          <span class="place-chip">Suitable location</span>
+          <span class="place-chip">Site / depot</span>
         </div>
         <a class="btn btn-primary" href="areas-we-serve.html">Check My Area</a>
       </div>
@@ -151,28 +135,28 @@
             <span class="process-no">01</span>
             <div>
               <h3>Send a photo</h3>
-              <p>Provide vehicle details and a clear image of the damage. A whole-windscreen shot plus a close-up is ideal.</p>
+              <p>Provide vehicle or machine details and a clear image of the damage. A whole-windscreen shot plus a close-up is ideal.</p>
             </div>
           </article>
           <article class="process-row reveal">
             <span class="process-no">02</span>
             <div>
               <h3>Get your quote</h3>
-              <p>We assess the damage and vehicle details, then confirm the proposed service and price.</p>
+              <p>We identify the glass and confirm a replacement price for that vehicle, bakkie or yellow-metal unit.</p>
             </div>
           </article>
           <article class="process-row reveal">
             <span class="process-no">03</span>
             <div>
               <h3>Confirm a time</h3>
-              <p>Choose a suitable appointment around the vehicle’s location and your day.</p>
+              <p>Seven days a week. Choose a suitable appointment around the vehicle’s location.</p>
             </div>
           </article>
           <article class="process-row reveal">
             <span class="process-no">04</span>
             <div>
               <h3>We come to you</h3>
-              <p>Repair or replacement is completed at the agreed location where suitable.</p>
+              <p>Replacement is completed at the agreed location where suitable — metro, town or site.</p>
             </div>
           </article>
         </div>
@@ -183,7 +167,7 @@
       <div class="container">
         <div class="section-head reveal">
           <h2>Show us what happened.</h2>
-          <p>A guided assessment. Only the details needed to start a useful quote.</p>
+          <p>A guided replacement quote. Only the details needed to identify the glass and get to you.</p>
         </div>
         <form class="assess-form" id="quote-form" novalidate>
           <div class="form-content assess">
@@ -199,15 +183,16 @@
                 <div class="form-grid">
                   <div class="field"><label for="name">Full name *</label><input id="name" name="name" autocomplete="name" required placeholder="e.g. Thabo Ndlovu"></div>
                   <div class="field"><label for="mobile">Mobile number *</label><input id="mobile" name="mobile" type="tel" autocomplete="tel" required placeholder="082 000 0000"></div>
-                  <div class="field"><label for="suburb">Suburb *</label><input id="suburb" name="suburb" autocomplete="address-level3" required placeholder="Where is the vehicle?"></div>
-                  <div class="field"><label for="city">City</label><input id="city" name="city" autocomplete="address-level2" placeholder="Johannesburg"></div>
+                  <div class="field"><label for="suburb">Suburb or town *</label><input id="suburb" name="suburb" autocomplete="address-level3" required placeholder="Including smaller towns"></div>
+                  <div class="field"><label for="city">City</label><input id="city" name="city" autocomplete="address-level2" placeholder="Or nearest town"></div>
                   <div class="field"><label for="province">Province *</label><select id="province" name="province" required><option value="">Select province</option><option>Eastern Cape</option><option>Free State</option><option>Gauteng</option><option>KwaZulu-Natal</option><option>Limpopo</option><option>Mpumalanga</option><option>North West</option><option>Northern Cape</option><option>Western Cape</option></select></div>
                   <div class="field"><label for="postcode">Postcode</label><input id="postcode" name="postcode" inputmode="numeric" autocomplete="postal-code" placeholder="Optional"></div>
                 </div>
                 <div class="step-nav"><button class="btn btn-primary" type="button" data-next>Continue</button></div>
               </fieldset>
               <fieldset data-step="2">
-                <h3>What is the vehicle?</h3>
+                <h3>What needs glass?</h3>
+                <div class="field" style="margin-bottom:16px"><label for="vehicle-type">Vehicle type</label><select id="vehicle-type" name="vehicle_type"><option value="">Select if known</option><option>Yellow metal / plant</option><option>Luxury car</option><option>Passenger car / SUV</option><option>Bakkie / light commercial</option><option>Other</option></select></div>
                 <div class="form-grid three">
                   <div class="field"><label for="vehicle-year">Year *</label><input id="vehicle-year" name="vehicle_year" inputmode="numeric" required placeholder="2020"></div>
                   <div class="field"><label for="vehicle-make">Make *</label><input id="vehicle-make" name="vehicle_make" required placeholder="Toyota"></div>
@@ -220,7 +205,7 @@
                 <h3>What does the damage look like?</h3>
                 <div class="field"><span class="field-label">Type of damage *</span>
                   <div class="damage-options">
-                    <label class="damage-option"><input type="radio" name="damage" value="Chip repair" required><span>Chip</span></label>
+                    <label class="damage-option"><input type="radio" name="damage" value="Chip" required><span>Chip(s)</span></label>
                     <label class="damage-option"><input type="radio" name="damage" value="Crack"><span>Crack</span></label>
                     <label class="damage-option"><input type="radio" name="damage" value="Smashed"><span>Shattered</span></label>
                     <label class="damage-option"><input type="radio" name="damage" value="Unsure"><span>Unknown</span></label>
@@ -228,14 +213,14 @@
                 </div>
                 <div class="form-grid" style="margin-top:16px">
                   <div class="field"><label for="damage-size">Approximate size</label><input id="damage-size" name="damage_size" placeholder="Optional"></div>
-                  <div class="field"><label for="damage-position">Damage position</label><select id="damage-position" name="damage_position"><option value="">Select if known</option><option>Driver’s view</option><option>Centre</option><option>Passenger side</option><option>Near the edge</option><option>Unknown</option></select></div>
+                  <div class="field"><label for="damage-position">Damage position</label><select id="damage-position" name="damage_position"><option value="">Select if known</option><option>Driver’s view</option><option>Centre</option><option>Passenger side</option><option>Near the edge</option><option>Multiple chips</option><option>Unknown</option></select></div>
                 </div>
                 <div class="step-nav"><button class="btn btn-outline light" type="button" data-back>Back</button><button class="btn btn-primary" type="button" data-next>Continue</button></div>
               </fieldset>
               <fieldset data-step="4">
                 <h3>Upload a clear photo of the damage</h3>
                 <div class="field full"><label class="file-drop"><strong id="file-label">Upload a clear photo of the damage</strong><br><small>Use the camera on mobile, or choose a file. JPG, PNG or HEIC.</small><input id="photo" name="photo" type="file" accept="image/*" capture="environment"></label></div>
-                <div class="field full" style="margin-top:16px"><label for="notes">Additional notes</label><textarea id="notes" name="notes" placeholder="Sensors, cameras, preferred appointment or anything else"></textarea></div>
+                <div class="field full" style="margin-top:16px"><label for="notes">Additional notes</label><textarea id="notes" name="notes" placeholder="Sensors, cameras, site access, preferred appointment or anything else"></textarea></div>
                 <label class="consent" style="margin-top:18px"><input type="checkbox" required><span>I consent to Windscreen Doctor using these details to assess my request and contact me about this quotation. This prototype does not transmit or store the information entered.</span></label>
                 <div class="form-actions"><button class="btn btn-outline light" type="button" data-back>Back</button><button class="btn btn-primary" type="submit">Request My Quote</button></div>
                 <p class="whatsapp-note">Prefer WhatsApp? Send the photo directly once the business number is connected. The WhatsApp option is not live on this prototype.</p>
@@ -270,15 +255,15 @@
     <section class="section" id="quality" style="background:var(--white)">
       <div class="container">
         <div class="section-head reveal">
-          <h2>Workmanship, without overclaiming.</h2>
-          <p>Clear process. Proper preparation. Honest limits.</p>
+          <h2>Replacement done properly.</h2>
+          <p>Specialist mobile fitment. Clear process. Honest limits.</p>
         </div>
         <div class="quality-list reveal">
           <div class="quality-row"><h3>Correct fitment</h3><p>The glass specification depends on the vehicle year, make, model and fitted features. Those details come first.</p></div>
           <div class="quality-row"><h3>Proper preparation</h3><p>Trim, bonding surfaces and the opening need to be prepared before new glass is set.</p></div>
           <div class="quality-row"><h3>Quality glass</h3><p>The windscreen is matched to the vehicle. Confirm the exact glass grade with the quotation — this prototype does not publish unverified OEM or certification claims.</p></div>
           <div class="quality-row"><h3>Safe curing</h3><p>After replacement, follow the technician’s safe-drive-away guidance. Conditions affect curing time.</p></div>
-          <div class="quality-row"><h3>Clean finishing</h3><p>The job should leave the vehicle usable and presentable, with aftercare explained before the technician leaves.</p></div>
+          <div class="quality-row"><h3>Insurers</h3><p>We work with insurers. Cover and excess still depend on the policy — confirm glass cover with yours. We can quote either way. Insurer names will be published once confirmed.</p></div>
         </div>
       </div>
     </section>
@@ -292,20 +277,21 @@
           <span class="map-marker" style="left:87%;top:60%"><b>Durban</b></span>
           <span class="map-marker" style="left:64%;top:84%"><b>Gqeberha</b></span>
           <span class="map-marker" style="left:56%;top:59%"><b>Bloemfontein</b></span>
+          <span class="map-marker" style="left:34%;top:52%"><b>Upington</b></span>
           <figcaption class="map-credit">Province map by Adrian Frith, CC BY-SA via Wikimedia Commons.</figcaption>
         </figure>
         <div class="reveal">
-          <h2>Tell us where the vehicle is.</h2>
-          <p>Coverage depends on current technician and stock availability. These cities are planning guides, not a promise of immediate nationwide service.</p>
+          <h2>Anywhere in the country.</h2>
+          <p>The metros already have fitment chains. The opportunity is also Upington, a site 20 km outside town, and every other place a vehicle or yellow-metal unit cannot easily travel from. Tell us where it is — we confirm before we travel.</p>
           <div class="city-grid">
             <a class="city-link" href="get-a-quote.html?suburb=Johannesburg">Johannesburg</a>
-            <a class="city-link" href="get-a-quote.html?suburb=Pretoria">Pretoria</a>
             <a class="city-link" href="get-a-quote.html?suburb=Cape%20Town">Cape Town</a>
             <a class="city-link" href="get-a-quote.html?suburb=Durban">Durban</a>
-            <a class="city-link" href="get-a-quote.html?suburb=Gqeberha">Gqeberha</a>
-            <a class="city-link" href="get-a-quote.html?suburb=Bloemfontein">Bloemfontein</a>
+            <a class="city-link" href="get-a-quote.html?suburb=Upington">Upington</a>
+            <a class="city-link" href="get-a-quote.html?suburb=Kimberley">Kimberley</a>
+            <a class="city-link" href="get-a-quote.html?suburb=Polokwane">Polokwane</a>
           </div>
-          <a class="btn btn-outline" href="areas-we-serve.html">Check My Suburb</a>
+          <a class="btn btn-outline" href="areas-we-serve.html">Check My Town</a>
         </div>
       </div>
     </section>
@@ -323,24 +309,57 @@
       </div>
     </section>
 
+    <section class="section" id="guides" style="background:var(--white)">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Guides</p>
+          <h2>Clear answers before you send a photo.</h2>
+          <p>Practical notes on mobile replacement, coverage and yellow metal. <a href="blog.html">Browse the blog</a>.</p>
+        </div>
+        <div class="tips-grid">
+          <article class="tip-card">
+            <img src="assets/crack-macro.webp" alt="Cracked vehicle windscreen" width="1600" height="900" loading="lazy">
+            <div class="tip-body">
+              <span class="tip-tag">Replacement</span>
+              <h3><a href="article-when-to-replace-windscreen.html">When a windscreen needs replacing</a></h3>
+              <p>Chips, spreading cracks, edge damage and shattered glass.</p>
+            </div>
+          </article>
+          <article class="tip-card">
+            <img src="assets/hero-technician.webp" alt="Mobile windscreen replacement at a driveway" width="1376" height="768" loading="lazy">
+            <div class="tip-body">
+              <span class="tip-tag">Mobile</span>
+              <h3><a href="article-mobile-windscreen-replacement.html">Mobile replacement vs a fitment centre</a></h3>
+              <p>Why the vehicle can stay at home, work or on site.</p>
+            </div>
+          </article>
+          <article class="tip-card">
+            <img src="assets/yellow-metal.webp" alt="Yellow construction equipment" width="1600" height="1005" loading="lazy">
+            <div class="tip-body">
+              <span class="tip-tag">Yellow metal</span>
+              <h3><a href="article-yellow-metal-windscreen.html">Plant and yellow-metal glass</a></h3>
+              <p>Machines that cannot visit a passenger-car workshop.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="faq">
       <div class="container home-faq">
         <div>
           <h2>A clearer answer starts here.</h2>
-          <p>A damaged windscreen is stressful. Getting it sorted should not be.</p>
+          <p>A damaged windscreen is stressful. Getting it replaced should not be.</p>
           <a class="btn btn-outline" href="faq.html">Browse all FAQs</a>
         </div>
         <div class="accordion">
-          <article class="faq-item"><button class="faq-question" aria-expanded="true">Can my windscreen be repaired?<span>+</span></button><div class="faq-answer"><div><p>It depends on the size, depth and position of the damage. Chips near an edge, in the driver’s line of sight or connected to a long crack may require replacement. Send a clear photo for an initial assessment.</p></div></div></article>
-          <article class="faq-item"><button class="faq-question" aria-expanded="false">When does it need replacing?<span>+</span></button><div class="faq-answer"><div><p>Replacement may be needed for long or spreading cracks, edge damage, multiple impact points, or damage that obstructs safe visibility.</p></div></div></article>
-          <article class="faq-item"><button class="faq-question" aria-expanded="false">How much does it cost?<span>+</span></button><div class="faq-answer"><div><p>Pricing depends on the damage and, for replacements, the vehicle year, make, model and windscreen specification. Submit those details for a relevant quotation.</p></div></div></article>
-          <article class="faq-item"><button class="faq-question" aria-expanded="false">Do you come to me?<span>+</span></button><div class="faq-answer"><div><p>Yes. Mobile service is the central part of the offering. Tell us where the vehicle is and we will confirm coverage and practical requirements.</p></div></div></article>
-          <article class="faq-item"><button class="faq-question" aria-expanded="false">How long does replacement take?<span>+</span></button><div class="faq-answer"><div><p>Time on site depends on the vehicle, glass specification and working conditions. The technician will explain the expected duration and any safe-drive-away period before work starts.</p></div></div></article>
-          <article class="faq-item"><button class="faq-question" aria-expanded="false">When can I drive afterwards?<span>+</span></button><div class="faq-answer"><div><p>Chip repair and replacement have different requirements. Following replacement, observe the technician’s safe-drive-away guidance.</p></div></div></article>
-          <article class="faq-item"><button class="faq-question" aria-expanded="false">Do you work with insurance?<span>+</span></button><div class="faq-answer"><div><p>Insurance-claim support is currently being finalised. Cover differs between policies, so confirm glass cover and excess with your insurer. We can still provide a quotation to review.</p></div></div></article>
+          <article class="faq-item"><button class="faq-question" aria-expanded="true">What vehicles do you cover?<span>+</span></button><div class="faq-answer"><div><p>Any kind with a windscreen: yellow metal and plant, luxury cars, passenger vehicles and bakkies. Send the make, model and a photo so the correct glass can be identified.</p></div></div></article>
+          <article class="faq-item"><button class="faq-question" aria-expanded="false">Do you come to me anywhere in South Africa?<span>+</span></button><div class="faq-answer"><div><p>Yes — that is the model. Metros, towns and outlying sites. Tell us the location and we confirm technician and glass availability before travelling.</p></div></div></article>
+          <article class="faq-item"><button class="faq-question" aria-expanded="false">Do you work seven days a week?<span>+</span></button><div class="faq-answer"><div><p>Yes. Replacement appointments can be arranged seven days a week, subject to the location and the glass required.</p></div></div></article>
+          <article class="faq-item"><button class="faq-question" aria-expanded="false">Do you work with insurance?<span>+</span></button><div class="faq-answer"><div><p>Yes, we work with insurers. Cover and excess still depend on the policy, so confirm glass cover with yours. We can quote either way. Specific insurer names will be listed once they are confirmed for publication.</p></div></div></article>
+          <article class="faq-item"><button class="faq-question" aria-expanded="false">How much does replacement cost?<span>+</span></button><div class="faq-answer"><div><p>Pricing depends on the vehicle or machine year, make, model and windscreen specification. Submit those details for a relevant quotation.</p></div></div></article>
           <article class="faq-item"><button class="faq-question" aria-expanded="false">What if my car has cameras or ADAS?<span>+</span></button><div class="faq-answer"><div><p>Some vehicles require camera recalibration after windscreen replacement. Include the year, make and model so the requirement can be identified before booking. We will advise where calibration applies; we do not currently claim to perform it in-house.</p></div></div></article>
-          <article class="faq-item"><button class="faq-question" aria-expanded="false">What areas do you cover?<span>+</span></button><div class="faq-answer"><div><p>Service is offered in supported areas across South Africa, subject to technician and stock availability. Submit your suburb for confirmation.</p></div></div></article>
-          <article class="faq-item"><button class="faq-question" aria-expanded="false">What details do you need for a quote?<span>+</span></button><div class="faq-answer"><div><p>A clear photo of the damage, the vehicle year, make and model, and the suburb where the vehicle will be. Notes about cameras or sensors help too.</p></div></div></article>
+          <article class="faq-item"><button class="faq-question" aria-expanded="false">Do you repair chips or cracks?<span>+</span></button><div class="faq-answer"><div><p>No. This site is windscreen replacement only. Chip or crack repair is a different service and is not offered here. Damaged glass is quoted for replacement.</p></div></div></article>
         </div>
       </div>
     </section>
@@ -348,8 +367,8 @@
     <section class="final-cta">
       <img src="assets/crack-macro.webp" alt="Cracked windscreen looking out onto the road" width="1600" height="900" loading="lazy">
       <div class="container final-cta-copy">
-        <h2>Don’t guess.</h2>
-        <p class="lede" style="color:rgba(255,255,255,.82)">Show us the damage.</p>
+        <h2>Any vehicle. Send a photo.</h2>
+        <p class="lede" style="color:rgba(255,255,255,.82)">We replace the windscreen. We come to you.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#quote">Send a Photo</a>
           <a class="btn btn-outline light" href="#quote">Get a Quote</a>
@@ -362,16 +381,16 @@
     <div class="container footer-grid">
       <div>
         <a class="logo" href="index.html"><span class="logo-type">Windscreen <strong>Doctor</strong></span></a>
-        <p>Premium mobile automotive glass. Chip repair and windscreen replacement at a suitable home or workplace location.</p>
+        <p>Nationwide mobile windscreen replacement. Any vehicle, anywhere in the country, any day.</p>
         <p>Clear solutions for clear vision.</p>
         <p>Phone and WhatsApp details will be published once confirmed. Until then, use the quote form.</p>
       </div>
       <div>
         <h3>Services</h3>
         <ul>
-          <li><a href="chip-repair.html">Repair</a></li>
           <li><a href="windscreen-replacement.html">Replacement</a></li>
           <li><a href="mobile-fitment.html">Mobile fitment</a></li>
+          <li><a href="index.html#vehicles">All vehicles</a></li>
           <li><a href="areas-we-serve.html">Coverage</a></li>
         </ul>
       </div>
@@ -381,7 +400,7 @@
           <li><a href="how-it-works.html">How it works</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="get-a-quote.html">Contact</a></li>
-          <li><a href="glass-care-tips.html">Glass care tips</a></li>
+          <li><a href="blog.html">Blog</a></li>
         </ul>
       </div>
       <div>
@@ -393,12 +412,38 @@
         </ul>
       </div>
     </div>
-    <div class="container footer-bottom">© <span data-year></span> Windscreen Doctor. Interactive website concept for windscreendoctor.co.za. Service availability is confirmed locally.</div>
+    <div class="container footer-bottom">© <span data-year></span> Windscreen Doctor. Interactive website concept for windscreendoctor.co.za. Availability is confirmed for the vehicle’s location before travel.</div>
   </footer>
   <div class="mobile-actions">
     <a class="btn btn-outline" href="#quote">Get a Quote</a>
     <a class="btn btn-primary" href="#quote">Send Photo</a>
   </div>
   <script src="assets/pages.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutomotiveBusiness",
+    "name": "Windscreen Doctor",
+    "url": "https://windscreendoctor.co.za/",
+    "image": "https://windscreendoctor.co.za/wp-content/uploads/2026/08/hero-cinematic.webp",
+    "logo": "https://windscreendoctor.co.za/wp-content/uploads/2026/08/favicon.svg",
+    "description": "Nationwide mobile windscreen replacement. Any vehicle, anywhere in South Africa, any day.",
+    "areaServed": { "@type": "Country", "name": "South Africa" },
+    "address": { "@type": "PostalAddress", "addressCountry": "ZA" },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Mobile windscreen replacement",
+      "itemListElement": [{
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mobile windscreen replacement",
+          "serviceType": "Windscreen replacement",
+          "areaServed": { "@type": "Country", "name": "South Africa" }
+        }
+      }]
+    }
+  }
+  </script>
 </body>
 </html>

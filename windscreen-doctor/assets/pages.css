@@ -234,7 +234,23 @@ p { color: var(--body); }
 .hero .kicker { color: rgba(255,255,255,.72); }
 .hero h1, .hero h2 { color: var(--white); }
 .hero h1 span { display: block; }
-.hero .support { max-width: 34rem; color: rgba(255,255,255,.82); font-size: 1.08rem; }
+.hero .support { max-width: 36rem; color: rgba(255,255,255,.82); font-size: 1.08rem; }
+.hero-fleet {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 22px;
+}
+.hero-fleet span {
+  padding: 7px 12px;
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: 999px;
+  color: rgba(255,255,255,.9);
+  font-size: .78rem;
+  font-weight: 520;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 .hero-shine {
   position: absolute;
@@ -318,6 +334,25 @@ p { color: var(--body); }
   font-weight: 600;
   letter-spacing: .14em;
   text-transform: uppercase;
+}
+.fleet-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.fleet-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--white);
+}
+.fleet-card img { height: 180px; object-fit: cover; }
+.fleet-card .pair-body { padding: 22px; }
+.fleet-card.replace { color: var(--white); background: var(--black); border-color: transparent; }
+.fleet-card.replace h3 { color: var(--white); }
+.fleet-card.replace p { color: rgba(255,255,255,.72); }
+@media (max-width: 900px) {
+  .fleet-grid { grid-template-columns: 1fr 1fr; }
 }
 
 .visualiser {
@@ -799,6 +834,42 @@ input:focus, select:focus, textarea:focus { border-color: var(--accent-dark); bo
 .article h2 { margin-top: 48px; font-size: 1.8rem; }
 .article-callout { margin: 36px 0; padding: 28px; border: 1px solid var(--line); border-radius: var(--radius-md); background: var(--white); }
 
+.blog-hero { max-width: 720px; }
+.blog-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 20px; }
+.blog-feature {
+  display: grid;
+  align-content: end;
+  min-height: 420px;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  color: var(--white);
+  background: var(--black);
+}
+.blog-feature img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.blog-feature { position: relative; }
+.blog-feature::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent, rgba(10,10,10,.82));
+  content: "";
+}
+.blog-feature-copy { position: relative; z-index: 1; padding: 32px; }
+.blog-feature h2, .blog-feature p { color: var(--white); }
+.blog-stack { display: grid; gap: 16px; }
+.blog-card { overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius-md); background: var(--white); }
+.blog-card img { width: 100%; height: 180px; object-fit: cover; }
+.blog-card a { color: inherit; text-decoration: none; }
+.blog-card-body { padding: 20px; }
+.blog-card h3 { margin-bottom: 8px; font-size: 1.2rem; }
+.tip-card h3 a { color: inherit; text-decoration: none; }
+.related-posts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 48px; }
+.article-cta { margin: 40px 0 0; padding: 32px; border-radius: var(--radius-md); color: var(--white); background: var(--black); }
+.article-cta h2, .article-cta p { color: var(--white); }
+
+@media (max-width: 800px) {
+  .blog-grid, .related-posts { grid-template-columns: 1fr; }
+}
+
 .site-footer { color: rgba(255,255,255,.68); background: var(--black); }
 .footer-grid { display: grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: 40px; padding: 72px 0 48px; }
 .footer-grid p { color: rgba(255,255,255,.58); }
@@ -873,7 +944,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--accent-dark); bo
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .stat:nth-child(3), .stat:nth-child(4) { border-top: 1px solid var(--line-dark); }
   .stat:nth-child(3) { border-left: 0; }
-  .grid-3, .grid-4, .steps-grid, .tips-grid, .city-grid { grid-template-columns: repeat(2, 1fr); }
+  .grid-3, .grid-4, .steps-grid, .tips-grid, .city-grid, .fleet-grid { grid-template-columns: repeat(2, 1fr); }
   .pair-card { min-height: 0; }
   .pair-card img { height: 240px; }
   .process-row, .quality-row { grid-template-columns: 72px 1fr; gap: 16px; padding: 32px 0; }

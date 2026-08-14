@@ -28,35 +28,53 @@ Confirm those details before production launch. The quotation form is an
 interactive demonstration and does not submit or store customer data.
 Phone and WhatsApp numbers are left unpublished until confirmed.
 
+Chip repair is **not currently offered**. The previous chip-repair page is
+saved in `archive/chip-repair.html` for a later return.
+
+Current live positioning:
+
+- Nationwide mobile **windscreen replacement**
+- Any vehicle: yellow metal / plant, luxury cars, passenger vehicles, bakkies
+- Seven days a week
+- Towns and outlying sites, not only metros
+- Chip or crack **repair** is not this site. Damaged glass is quoted for replacement.
+
 ## Quote form fields
 
 Preserved IDs and names:
 
 - `name`, `mobile`, `province`, `suburb`
 - `vehicle-year` / `vehicle_year`, `vehicle-make` / `vehicle_make`, `vehicle-model` / `vehicle_model`
-- `damage` values: `Chip repair`, `Crack`, `Smashed`, `Unsure`
+- `damage` values: `Chip`, `Crack`, `Smashed`, `Unsure` (was `Chip repair`; now describes damage, not a service)
 - `photo`, `notes`
 
 Added optional fields (do not exist in any live backend yet):
 
-- `city`, `postcode`, `vehicle-variant`, `damage-size`, `damage-position`
+- `city`, `postcode`, `vehicle-variant`, `vehicle-type`, `damage-size`, `damage-position`
 
 Suburb handoff from `areas-we-serve.html?suburb=` is unchanged.
 
 ## WordPress handoff
 
 1. Homepage
-2. Windscreen chip repair
-3. Windscreen replacement
-4. Mobile fitment
-5. How it works
-6. Areas we serve
-7. Frequently asked questions
-8. Request a quote
-9. Glass care tips archive
-10. Glass care article
-11. Privacy Policy (placeholder)
-12. Terms (placeholder)
+2. Windscreen replacement
+3. Mobile fitment
+4. How it works
+5. Areas we serve
+6. Blog (listing)
+7. Article: When a windscreen needs replacing
+8. Article: How to stop a chip spreading
+9. Article: Mobile replacement vs a fitment centre
+10. Article: Yellow metal and plant glass
+11. Article: Driving with a cracked windscreen
+12. Frequently asked questions
+13. Request a quote
+14. Glass care tips (redirects to blog)
+15. Privacy Policy (placeholder)
+16. Terms (placeholder)
+17. Chip repair stub (points to replacement; full page in `archive/`)
+
+`robots.txt` and `sitemap.xml` assume the live host `https://windscreendoctor.co.za/`. Update those URLs if the production path differs.
 
 ## Brand tokens
 
